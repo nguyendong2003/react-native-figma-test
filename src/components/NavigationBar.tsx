@@ -49,6 +49,14 @@ export interface NavigationBarProps {
    * Optional override style for the title text.
    */
   titleStyle?: StyleProp<TextStyle>;
+  /**
+   * Optional tint color for the back button icon.
+   */
+  backButtonTint?: string;
+  /**
+   * Optional tint color for the right action button icon.
+   */
+  rightButtonTint?: string;
 }
 
 export function NavigationBar({
@@ -60,6 +68,8 @@ export function NavigationBar({
   rightIconName = 'search',
   style,
   titleStyle,
+  backButtonTint,
+  rightButtonTint,
 }: NavigationBarProps) {
   const colorScheme = useColorScheme();
   const theme = colorScheme === 'dark' ? 'dark' : 'light';
@@ -93,7 +103,7 @@ export function NavigationBar({
           >
             <Image 
               source={Icons.arrowDownSignToNavigate} 
-              style={[styles.backIcon, { tintColor: activeColors.text }]}
+              style={[styles.backIcon, { tintColor: backButtonTint || activeColors.text }]}
               contentFit="contain"
             />
           </TouchableOpacity>
@@ -120,7 +130,7 @@ export function NavigationBar({
           >
             <Image 
               source={Icons[rightIconName]} 
-              style={[styles.rightIcon, { tintColor: activeColors.text }]}
+              style={[styles.rightIcon, { tintColor: rightButtonTint || activeColors.text }]}
               contentFit="contain"
             />
           </TouchableOpacity>
