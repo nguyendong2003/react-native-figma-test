@@ -2,12 +2,13 @@ import { Button } from "@/components/Button";
 import { useTheme } from "@/context/ThemeContext";
 import { router } from "expo-router";
 import { StyleSheet, Switch, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const { isDarkMode, toggleTheme, activeColors } = useTheme();
 
   return (
-    <View
+    <SafeAreaView
       style={[styles.container, { backgroundColor: activeColors.background }]}
     >
       <Text style={[styles.text, { color: activeColors.text }]}>
@@ -31,7 +32,13 @@ export default function HomeScreen() {
         style={styles.button}
         onPress={() => router.push("/signin")}
       />
-    </View>
+
+      <Button
+        title="Sign up"
+        style={styles.button}
+        onPress={() => router.push("/signup")}
+      />
+    </SafeAreaView>
   );
 }
 

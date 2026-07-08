@@ -19,40 +19,40 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function SignInScreen() {
+export default function SignUpScreen() {
   const { theme, activeColors } = useTheme();
 
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [agree, setAgree] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const isFormValid = email.trim().length > 0 && password.trim().length > 0;
+  const isFormValid =
+    name.trim().length > 0 &&
+    email.trim().length > 0 &&
+    password.trim().length > 0 &&
+    agree;
 
-  const handleSignIn = () => {
+  const handleSignUp = () => {
     if (!isFormValid) return;
 
     setLoading(true);
     // Simulate API Call
     setTimeout(() => {
       setLoading(false);
-      Alert.alert("Success", `Signed in as: ${email}`);
+      Alert.alert("Success", `Account created for: ${email}`);
+      router.replace("/signin");
     }, 1500);
   };
 
-  const handleFingerprintPress = () => {
-    Alert.alert("Biometric Authentication", "Fingerprint scanner activated.");
-  };
-
-  const handleForgotPassword = () => {
-    Alert.alert(
-      "Forgot Password",
-      "Password reset instructions have been sent.",
-    );
-  };
-
-  const handleSignUp = () => {
-    router.push("/signup");
+  const handleSignIn = () => {
+    if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace("/signin");
+    }
   };
 
   return (
@@ -84,22 +84,30 @@ export default function SignInScreen() {
             style={[styles.bodyCard, { backgroundColor: activeColors.surface }]}
           >
             <Text style={[styles.welcomeText, { color: activeColors.primary }]}>
-              Welcome Back
+              Welcome to us,
             </Text>
 
             <Text style={[styles.subtitleText, { color: activeColors.text }]}>
-              Hello there, sign in to continue
+              Hello there, create New account
             </Text>
 
             {/* Centered Illustration */}
             <Image
-              source={Icons.signinIllustration}
+              source={Icons.signupIllustration}
               style={styles.illustration}
               contentFit="contain"
             />
 
             {/* Input Form Fields */}
             <View style={styles.formContainer}>
+              <InputField
+                placeholder="Name"
+                value={name}
+                onChangeText={setName}
+                autoCapitalize="words"
+                autoCorrect={false}
+              />
+
               <InputField
                 placeholder="Text input"
                 value={email}
@@ -121,63 +129,65 @@ export default function SignInScreen() {
               />
             </View>
 
-            {/* Forgot Password Link */}
+            {/* Terms and Conditions Checkbox */}
             <TouchableOpacity
-              onPress={handleForgotPassword}
-              style={styles.forgotPasswordContainer}
-              accessibilityRole="button"
-              accessibilityLabel="Forgot your password"
+              onPress={() => setAgree(!agree)}
+              style={styles.checkboxRow}
+              activeOpacity={0.8}
+              accessibilityRole="checkbox"
+              accessibilityState={{ checked: agree }}
+              accessibilityLabel="Agree to Terms and Conditions"
             >
-              <Text
+              <View
                 style={[
-                  styles.forgotPasswordText,
-                  { color: activeColors.placeholder },
+                  styles.checkboxBox,
+                  { borderColor: agree ? activeColors.primary : "#bfbfbf" },
+                  agree && { backgroundColor: activeColors.primary },
                 ]}
               >
-                Forgot your password ?
+                {agree && <View style={styles.checkboxCheckInner} />}
+              </View>
+              <Text
+                style={[styles.checkboxLabel, { color: activeColors.text }]}
+              >
+                By creating an account you agree{"\n"}
+                to our{" "}
+                <Text
+                  style={{
+                    color: activeColors.primary,
+                    fontFamily: "Poppins-SemiBold",
+                  }}
+                >
+                  Terms and Conditions
+                </Text>
               </Text>
             </TouchableOpacity>
 
             {/* Action Buttons */}
             <Button
-              title="Sign in"
+              title="Sign up"
               loading={loading}
               disabled={!isFormValid}
-              onPress={handleSignIn}
-              style={styles.signInButton}
+              onPress={handleSignUp}
+              style={styles.signUpButton}
             />
 
-            {/* Fingerprint Authentication */}
-            <TouchableOpacity
-              onPress={handleFingerprintPress}
-              style={styles.fingerprintButton}
-              accessibilityRole="button"
-              accessibilityLabel="Biometric Sign In"
-            >
-              <Image
-                source={Icons.fingerprint}
-                style={styles.fingerprintIcon}
-                tintColor={activeColors.primary}
-                contentFit="contain"
-              />
-            </TouchableOpacity>
-
-            {/* Sign Up Link Row */}
-            <View style={styles.signUpRow}>
+            {/* Sign In Link Row */}
+            <View style={styles.signInRow}>
               <Text
-                style={[styles.noAccountText, { color: activeColors.text }]}
+                style={[styles.haveAccountText, { color: activeColors.text }]}
               >
-                Don't have an account?{" "}
+                Have an account?{" "}
               </Text>
               <TouchableOpacity
-                onPress={handleSignUp}
+                onPress={handleSignIn}
                 accessibilityRole="button"
-                accessibilityLabel="Sign Up"
+                accessibilityLabel="Sign In"
               >
                 <Text
-                  style={[styles.signUpText, { color: activeColors.primary }]}
+                  style={[styles.signInText, { color: activeColors.primary }]}
                 >
-                  Sign Up
+                  Sign In
                 </Text>
               </TouchableOpacity>
             </View>
@@ -227,42 +237,50 @@ const styles = StyleSheet.create({
     gap: 20,
     alignSelf: "stretch",
   },
-  forgotPasswordContainer: {
-    alignSelf: "flex-end",
-    marginTop: 12,
-    marginBottom: 40,
+  checkboxRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    alignSelf: "stretch",
+    marginTop: 20,
+    marginBottom: 32,
+    gap: 12,
   },
-  forgotPasswordText: {
-    ...Typography.caption2,
+  checkboxBox: {
+    width: 24,
+    height: 24,
+    borderWidth: 1,
+    borderRadius: 4,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 2,
   },
-  signInButton: {
+  checkboxCheckInner: {
+    width: 10,
+    height: 10,
+    backgroundColor: "#ffffff",
+    borderRadius: 2,
+  },
+  checkboxLabel: {
+    fontFamily: "Poppins-Regular",
+    fontSize: 12,
+    lineHeight: 18,
+    flex: 1,
+  },
+  signUpButton: {
     alignSelf: "stretch",
     marginBottom: 24,
   },
-  fingerprintButton: {
-    alignSelf: "center",
-    justifyContent: "center",
-    alignItems: "center",
-    width: 64,
-    height: 64,
-    marginBottom: 24,
-  },
-  fingerprintIcon: {
-    width: 64,
-    height: 64,
-  },
-  signUpRow: {
+  signInRow: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    // paddingTop: 12,
   },
-  noAccountText: {
+  haveAccountText: {
     fontFamily: "Poppins-Regular",
     fontSize: 12,
     lineHeight: 16,
   },
-  signUpText: {
+  signInText: {
     ...Typography.caption1,
   },
 });

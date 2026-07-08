@@ -50,7 +50,7 @@ When instructed to run `fe-gen-screen <screen-name>`, perform the following sequ
 1. Create the screen file under `src/app/` (e.g., `src/app/<route>.tsx`) following `expo-router` routing structure and `naming-conventions.md`.
 2. Follow `parse-layout.md` rules to translate coordinates, layout margins, alignments, and sizes into exact React Native `StyleSheet` values.
 3. Import the shared theme, extracted sub-components, and registered assets.
-4. Ensure layout wrappers use safe area contexts (`react-native-safe-area-context`) where needed.
+4. Ensure screen layout wrappers use `SafeAreaView` from `react-native-safe-area-context` (specifically targeting vertical edges like `edges={['bottom']}` or `edges={['top']}`) to ensure correct rendering and avoid manual safe-area padding calculations.
 
 ### Step 7: Verification
 

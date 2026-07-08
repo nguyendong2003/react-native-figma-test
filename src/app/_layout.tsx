@@ -33,6 +33,28 @@ function SignInHeader() {
   );
 }
 
+function SignUpHeader() {
+  const { theme, activeColors } = useTheme();
+  const insets = useSafeAreaInsets();
+
+  return (
+    <View style={{ paddingTop: insets.top, backgroundColor: theme === 'light' ? activeColors.primary1 : activeColors.background }}>
+      <NavigationBar
+        title="Sign up"
+        showBackButton={true}
+        backButtonTint={theme === 'light' ? activeColors.neutral6 : activeColors.text}
+        style={{
+          backgroundColor: theme === 'light' ? activeColors.primary1 : activeColors.background,
+          borderBottomWidth: 0,
+        }}
+        titleStyle={{
+          color: theme === 'light' ? activeColors.neutral6 : activeColors.text,
+        }}
+      />
+    </View>
+  );
+}
+
 function InnerLayout() {
   const { theme } = useTheme();
 
@@ -45,6 +67,14 @@ function InnerLayout() {
           options={{ 
             headerShown: true,
             header: () => <SignInHeader />,
+            animation: 'slide_from_right'
+          }} 
+        />
+        <Stack.Screen 
+          name="signup" 
+          options={{ 
+            headerShown: true,
+            header: () => <SignUpHeader />,
             animation: 'slide_from_right'
           }} 
         />

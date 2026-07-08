@@ -3,6 +3,7 @@ export const Icons = {
   search: require('./search.png'),
   unfoldMore: require('./unfold-more.svg'),
   signinIllustration: require('./signin-illustration.svg'),
+  signupIllustration: require('./signup-illustration.svg'),
   fingerprint: require('./fingerprint.svg'),
   eye: require('./eye.svg'),
 } as const;

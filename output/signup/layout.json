@@ -1,0 +1,2229 @@
+[
+    {
+        "bounds": {
+            "height": 812,
+            "width": 375,
+            "x": 3846,
+            "y": -3164
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 40,
+                    "width": 375,
+                    "x": 0,
+                    "y": 0
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 40,
+                            "width": 375,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 31,
+                                    "width": 219,
+                                    "x": 78,
+                                    "y": 0
+                                },
+                                "id": "I373:27;372:741",
+                                "name": "Fill 7",
+                                "styles": {
+                                    "fills": [
+                                        "#000000"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 40,
+                                    "width": 40,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "id": "I373:27;372:739",
+                                "name": "Fill 1",
+                                "styles": {
+                                    "fills": [
+                                        "#000000"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 40,
+                                    "width": 40,
+                                    "x": 335,
+                                    "y": 0
+                                },
+                                "id": "I373:27;372:740",
+                                "name": "Fill 4",
+                                "styles": {
+                                    "fills": [
+                                        "#000000"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I373:27;372:738",
+                        "name": "Display Shape",
+                        "styles": {
+                            "fills": [
+                                "#000000"
+                            ]
+                        },
+                        "type": "BOOLEAN_OPERATION"
+                    },
+                    {
+                        "bounds": {
+                            "height": 11.1,
+                            "width": 32.02,
+                            "x": 32.15,
+                            "y": 17.17
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 4.15,
+                                    "width": 4.17,
+                                    "x": 34,
+                                    "y": 18.74
+                                },
+                                "id": "I373:27;372:731",
+                                "name": "Path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 2.31,
+                                    "width": 2.34,
+                                    "x": 42.14,
+                                    "y": 19.08
+                                },
+                                "id": "I373:27;372:733",
+                                "name": "Path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 4.15,
+                                    "width": 4.17,
+                                    "x": 57.86,
+                                    "y": 18.74
+                                },
+                                "id": "I373:27;372:737",
+                                "name": "Path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 11.09,
+                                    "width": 8.15,
+                                    "x": 32.15,
+                                    "y": 17.17
+                                },
+                                "id": "I373:27;372:730",
+                                "name": "Path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 2.31,
+                                    "width": 2.34,
+                                    "x": 42.14,
+                                    "y": 24.56
+                                },
+                                "id": "I373:27;372:732",
+                                "name": "Path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 11.1,
+                                    "width": 8.06,
+                                    "x": 46.36,
+                                    "y": 17.17
+                                },
+                                "id": "I373:27;372:734",
+                                "name": "Path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 7.95,
+                                    "width": 4.24,
+                                    "x": 48.27,
+                                    "y": 18.74
+                                },
+                                "id": "I373:27;372:735",
+                                "name": "Path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 11.09,
+                                    "width": 8.15,
+                                    "x": 56.01,
+                                    "y": 17.17
+                                },
+                                "id": "I373:27;372:736",
+                                "name": "Path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I373:27;372:729",
+                        "name": "9:09",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ]
+                        },
+                        "type": "BOOLEAN_OPERATION"
+                    },
+                    {
+                        "bounds": {
+                            "height": 10.67,
+                            "width": 17,
+                            "x": 293.67,
+                            "y": 17.67
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 6,
+                                    "width": 3,
+                                    "x": 298.33,
+                                    "y": 22.33
+                                },
+                                "id": "I373:27;372:726",
+                                "name": "Cellular_Connection-path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 8.33,
+                                    "width": 3,
+                                    "x": 303,
+                                    "y": 20
+                                },
+                                "id": "I373:27;372:727",
+                                "name": "Cellular_Connection-path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 10.67,
+                                    "width": 3,
+                                    "x": 307.67,
+                                    "y": 17.67
+                                },
+                                "id": "I373:27;372:728",
+                                "name": "Cellular_Connection-path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 4,
+                                    "width": 3,
+                                    "x": 293.67,
+                                    "y": 24.33
+                                },
+                                "id": "I373:27;372:725",
+                                "name": "Cellular_Connection-path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I373:27;372:724",
+                        "name": "Mobile Signal",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ]
+                        },
+                        "type": "BOOLEAN_OPERATION"
+                    },
+                    {
+                        "bounds": {
+                            "height": 10.97,
+                            "width": 15.27,
+                            "x": 315.69,
+                            "y": 17.33
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 4.74,
+                                    "width": 15.27,
+                                    "x": 315.69,
+                                    "y": 17.33
+                                },
+                                "id": "I373:27;372:721",
+                                "name": "Wifi-path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 3.63,
+                                    "width": 9.95,
+                                    "x": 318.36,
+                                    "y": 21.12
+                                },
+                                "id": "I373:27;372:722",
+                                "name": "Wifi-path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 3.37,
+                                    "width": 4.63,
+                                    "x": 321.02,
+                                    "y": 24.92
+                                },
+                                "id": "I373:27;372:723",
+                                "name": "Wifi-path",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I373:27;372:720",
+                        "name": "Wifi",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ]
+                        },
+                        "type": "BOOLEAN_OPERATION"
+                    },
+                    {
+                        "bounds": {
+                            "height": 11.33,
+                            "width": 24.33,
+                            "x": 336,
+                            "y": 17.33
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 11.33,
+                                    "width": 22,
+                                    "x": 336,
+                                    "y": 17.33
+                                },
+                                "id": "I373:27;372:717",
+                                "name": "Rectangle",
+                                "styles": {
+                                    "cornerRadius": 2.6666667461395264,
+                                    "strokes": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "RECTANGLE"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 7.33,
+                                    "width": 18,
+                                    "x": 338,
+                                    "y": 19.33
+                                },
+                                "id": "I373:27;372:719",
+                                "name": "Rectangle",
+                                "styles": {
+                                    "cornerRadius": 1.3333333730697632,
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "RECTANGLE"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 4,
+                                    "width": 1.33,
+                                    "x": 359,
+                                    "y": 21
+                                },
+                                "id": "I373:27;372:718",
+                                "name": "Combined Shape",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I373:27;372:716",
+                        "name": "Battery",
+                        "styles": {},
+                        "type": "GROUP"
+                    }
+                ],
+                "id": "373:27",
+                "name": "System / StatusBars / White",
+                "styles": {
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 53,
+                    "width": 375,
+                    "x": 0,
+                    "y": 40
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 53,
+                            "width": 375,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "id": "I61:2;104:2530",
+                        "name": "Rectangle 401",
+                        "styles": {
+                            "fillStyle": "Neutral / 6",
+                            "fills": [
+                                "#ffffff"
+                            ]
+                        },
+                        "type": "RECTANGLE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 16,
+                            "width": 16,
+                            "x": 24,
+                            "y": 31
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 8.65,
+                                    "width": 15.99,
+                                    "x": 12,
+                                    "y": 0
+                                },
+                                "id": "I61:2;100:278;54:21611",
+                                "name": "Path",
+                                "styles": {
+                                    "fillStyle": "Neutral / 6",
+                                    "fills": [
+                                        "#ffffff"
+                                    ],
+                                    "strokes": [
+                                        "#979797"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I61:2;100:278",
+                        "name": "Icon/arrow-down-sign-to-navigate",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 28,
+                            "width": 75,
+                            "x": 56,
+                            "y": 25
+                        },
+                        "characters": "Sign up",
+                        "id": "I61:2;100:266",
+                        "name": "UI Text/Heading/H3/B",
+                        "styles": {
+                            "fillStyle": "Neutral / 6",
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 20,
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "lineHeight": {
+                                "unit": "PIXELS",
+                                "value": 28
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Title/2"
+                        },
+                        "type": "TEXT"
+                    },
+                    {
+                        "bounds": {
+                            "height": 20,
+                            "width": 20,
+                            "x": 331,
+                            "y": 29
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 18.32,
+                                    "width": 18.32,
+                                    "x": 0.83,
+                                    "y": 0.83
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 15,
+                                            "width": 15,
+                                            "x": 0.83,
+                                            "y": 0.83
+                                        },
+                                        "id": "I61:2;373:925;14:596",
+                                        "name": "Vector",
+                                        "styles": {
+                                            "fills": [
+                                                "#444444"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 4.17,
+                                            "width": 4.17,
+                                            "x": 4.17,
+                                            "y": 4.17
+                                        },
+                                        "id": "I61:2;373:925;14:597",
+                                        "name": "Vector",
+                                        "styles": {
+                                            "fills": [
+                                                "#444444"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 4.96,
+                                            "width": 4.96,
+                                            "x": 14.2,
+                                            "y": 14.2
+                                        },
+                                        "id": "I61:2;373:925;14:598",
+                                        "name": "Vector",
+                                        "styles": {
+                                            "fills": [
+                                                "#444444"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    }
+                                ],
+                                "id": "I61:2;373:925;14:595",
+                                "name": "Group",
+                                "styles": {},
+                                "type": "GROUP"
+                            }
+                        ],
+                        "id": "I61:2;373:925",
+                        "name": "Icon",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    }
+                ],
+                "id": "61:2",
+                "name": "Navigation Bar / Black",
+                "styles": {
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 28,
+                    "width": 191,
+                    "x": 24,
+                    "y": 132
+                },
+                "characters": "Welcome to us,",
+                "id": "61:42",
+                "name": "Welcome to us,",
+                "styles": {
+                    "fillStyle": "Primary / 1",
+                    "fills": [
+                        "#3629b7"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 24,
+                    "fontStyle": "SemiBold",
+                    "fontWeight": 600,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 28
+                    },
+                    "textAlignHorizontal": "LEFT"
+                },
+                "type": "TEXT"
+            },
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 194,
+                    "x": 27,
+                    "y": 164
+                },
+                "characters": "Hello there, create New account",
+                "id": "327:34543",
+                "name": "Hello there, create New account",
+                "styles": {
+                    "fillStyle": "Neutral / 1",
+                    "fills": [
+                        "#343434"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 12,
+                    "fontStyle": "Medium",
+                    "fontWeight": 500,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 16
+                    },
+                    "textAlignHorizontal": "LEFT",
+                    "textStyle": "Caption/2"
+                },
+                "type": "TEXT"
+            },
+            {
+                "bounds": {
+                    "height": 165,
+                    "width": 213,
+                    "x": 81,
+                    "y": 212
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 10,
+                            "width": 10,
+                            "x": 153,
+                            "y": 212
+                        },
+                        "id": "61:49",
+                        "name": "Ellipse 2",
+                        "styles": {
+                            "fillStyle": "Primary / 1",
+                            "fills": [
+                                "#3629b7"
+                            ]
+                        },
+                        "type": "ELLIPSE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 25,
+                            "width": 25,
+                            "x": 269,
+                            "y": 234
+                        },
+                        "id": "61:50",
+                        "name": "Ellipse 3",
+                        "styles": {
+                            "fillStyle": "Semantic / 1",
+                            "fills": [
+                                "#ff4267"
+                            ]
+                        },
+                        "type": "ELLIPSE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 10,
+                            "width": 10,
+                            "x": 81,
+                            "y": 277
+                        },
+                        "id": "61:53",
+                        "name": "Ellipse 6",
+                        "styles": {
+                            "fillStyle": "Semantic / 4",
+                            "fills": [
+                                "#52d5ba"
+                            ]
+                        },
+                        "type": "ELLIPSE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 150,
+                            "width": 150,
+                            "x": 116,
+                            "y": 227
+                        },
+                        "id": "61:44",
+                        "name": "Ellipse 1",
+                        "styles": {
+                            "fillStyle": "Primary / 4",
+                            "fills": [
+                                "#f2f1f9"
+                            ]
+                        },
+                        "type": "ELLIPSE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 92.31,
+                            "width": 50,
+                            "x": 166,
+                            "y": 256
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 3.08,
+                                    "width": 29.23,
+                                    "x": 176,
+                                    "y": 257.54
+                                },
+                                "id": "230:166",
+                                "name": "Vector 2",
+                                "styles": {
+                                    "fillStyle": "Neutral / 6",
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 92.31,
+                                    "width": 50,
+                                    "x": 166,
+                                    "y": 256
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 89.87,
+                                            "width": 48.4,
+                                            "x": 167,
+                                            "y": 256
+                                        },
+                                        "children": [
+                                            {
+                                                "bounds": {
+                                                    "height": 89.87,
+                                                    "width": 48.4,
+                                                    "x": 167,
+                                                    "y": 256
+                                                },
+                                                "id": "230:121",
+                                                "name": "Vector",
+                                                "styles": {
+                                                    "fillStyle": "Primary / 2",
+                                                    "fills": [
+                                                        "#5655b9"
+                                                    ]
+                                                },
+                                                "type": "VECTOR"
+                                            }
+                                        ],
+                                        "id": "230:120",
+                                        "name": "Group",
+                                        "styles": {},
+                                        "type": "GROUP"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 92.31,
+                                            "width": 50,
+                                            "x": 166,
+                                            "y": 256
+                                        },
+                                        "id": "230:122",
+                                        "name": "Vector",
+                                        "styles": {
+                                            "fillStyle": "Neutral / 6",
+                                            "fills": [
+                                                "#ffffff"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    }
+                                ],
+                                "id": "230:119",
+                                "name": "Group 289",
+                                "styles": {},
+                                "type": "GROUP"
+                            }
+                        ],
+                        "id": "230:169",
+                        "name": "Group 458",
+                        "styles": {},
+                        "type": "GROUP"
+                    },
+                    {
+                        "bounds": {
+                            "height": 27,
+                            "width": 30,
+                            "x": 176,
+                            "y": 289
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 27,
+                                    "width": 30,
+                                    "x": 176,
+                                    "y": 289
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 27,
+                                            "width": 30,
+                                            "x": 176,
+                                            "y": 289
+                                        },
+                                        "children": [
+                                            {
+                                                "bounds": {
+                                                    "height": 27,
+                                                    "width": 30,
+                                                    "x": 176,
+                                                    "y": 289
+                                                },
+                                                "children": [
+                                                    {
+                                                        "bounds": {
+                                                            "height": 11.79,
+                                                            "width": 11.53,
+                                                            "x": 185.28,
+                                                            "y": 289
+                                                        },
+                                                        "id": "116:10645",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 4.18,
+                                                            "width": 3.7,
+                                                            "x": 187.11,
+                                                            "y": 302.81
+                                                        },
+                                                        "id": "116:10644",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 4.18,
+                                                            "width": 3.97,
+                                                            "x": 190.81,
+                                                            "y": 302.81
+                                                        },
+                                                        "id": "116:10646",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 5.87,
+                                                            "width": 5.74,
+                                                            "x": 176,
+                                                            "y": 303.6
+                                                        },
+                                                        "id": "116:10648",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 11.84,
+                                                            "width": 10.44,
+                                                            "x": 179.34,
+                                                            "y": 302.89
+                                                        },
+                                                        "id": "116:10647",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 2.73,
+                                                            "width": 2.31,
+                                                            "x": 189.79,
+                                                            "y": 306.99
+                                                        },
+                                                        "id": "116:10643",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 4.99,
+                                                            "width": 4.42,
+                                                            "x": 188.61,
+                                                            "y": 309.72
+                                                        },
+                                                        "id": "116:10642",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 4.55,
+                                                            "width": 5.96,
+                                                            "x": 200.04,
+                                                            "y": 311.45
+                                                        },
+                                                        "id": "116:10650",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 2.87,
+                                                            "width": 3.7,
+                                                            "x": 201.17,
+                                                            "y": 308.58
+                                                        },
+                                                        "id": "116:10649",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    }
+                                                ],
+                                                "id": "116:10641",
+                                                "name": "Group",
+                                                "styles": {},
+                                                "type": "GROUP"
+                                            },
+                                            {
+                                                "bounds": {
+                                                    "height": 27,
+                                                    "width": 30,
+                                                    "x": 176,
+                                                    "y": 289
+                                                },
+                                                "children": [
+                                                    {
+                                                        "bounds": {
+                                                            "height": 11.79,
+                                                            "width": 11.53,
+                                                            "x": 185.28,
+                                                            "y": 289
+                                                        },
+                                                        "id": "116:10652",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 3.44,
+                                                            "width": 21.12,
+                                                            "x": 181.42,
+                                                            "y": 302.81
+                                                        },
+                                                        "id": "116:10653",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 4.18,
+                                                            "width": 2.68,
+                                                            "x": 187.11,
+                                                            "y": 302.81
+                                                        },
+                                                        "id": "116:10657",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 4.18,
+                                                            "width": 2.68,
+                                                            "x": 192.09,
+                                                            "y": 302.81
+                                                        },
+                                                        "id": "116:10658",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 5.87,
+                                                            "width": 5.74,
+                                                            "x": 176,
+                                                            "y": 303.6
+                                                        },
+                                                        "id": "116:10665",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 1.49,
+                                                            "width": 3.07,
+                                                            "x": 177.64,
+                                                            "y": 305.77
+                                                        },
+                                                        "id": "116:10666",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 2.73,
+                                                            "width": 2.31,
+                                                            "x": 189.79,
+                                                            "y": 306.99
+                                                        },
+                                                        "id": "116:10659",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 5.3,
+                                                            "width": 9.27,
+                                                            "x": 179.34,
+                                                            "y": 309.43
+                                                        },
+                                                        "id": "116:10654",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 5.47,
+                                                            "width": 15.37,
+                                                            "x": 183.25,
+                                                            "y": 309.25
+                                                        },
+                                                        "id": "116:10656",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 5,
+                                                            "width": 4.43,
+                                                            "x": 188.61,
+                                                            "y": 309.72
+                                                        },
+                                                        "id": "116:10660",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 4.55,
+                                                            "width": 5.96,
+                                                            "x": 200.04,
+                                                            "y": 311.45
+                                                        },
+                                                        "id": "116:10661",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 2.87,
+                                                            "width": 3.7,
+                                                            "x": 201.17,
+                                                            "y": 308.58
+                                                        },
+                                                        "id": "116:10662",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 1.96,
+                                                            "width": 1.95,
+                                                            "x": 202.05,
+                                                            "y": 312.74
+                                                        },
+                                                        "id": "116:10663",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 1.96,
+                                                            "width": 1.95,
+                                                            "x": 202.05,
+                                                            "y": 312.74
+                                                        },
+                                                        "id": "116:10664",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    },
+                                                    {
+                                                        "bounds": {
+                                                            "height": 0,
+                                                            "width": 7.01,
+                                                            "x": 193.03,
+                                                            "y": 314.73
+                                                        },
+                                                        "id": "116:10655",
+                                                        "name": "Vector",
+                                                        "styles": {
+                                                            "strokeStyle": "Neutral / 6",
+                                                            "strokes": [
+                                                                "#ffffff"
+                                                            ]
+                                                        },
+                                                        "type": "VECTOR"
+                                                    }
+                                                ],
+                                                "id": "116:10651",
+                                                "name": "Group",
+                                                "styles": {},
+                                                "type": "GROUP"
+                                            }
+                                        ],
+                                        "id": "116:10640",
+                                        "name": "XMLID 6",
+                                        "styles": {},
+                                        "type": "GROUP"
+                                    }
+                                ],
+                                "id": "116:10639",
+                                "name": "Group",
+                                "styles": {},
+                                "type": "GROUP"
+                            }
+                        ],
+                        "id": "116:10638",
+                        "name": "Group",
+                        "styles": {},
+                        "type": "GROUP"
+                    },
+                    {
+                        "bounds": {
+                            "height": 20,
+                            "width": 20,
+                            "x": 123,
+                            "y": 338
+                        },
+                        "id": "61:52",
+                        "name": "Ellipse 5",
+                        "styles": {
+                            "fillStyle": "Semantic / 3",
+                            "fills": [
+                                "#ffaf2a"
+                            ]
+                        },
+                        "type": "ELLIPSE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 10,
+                            "width": 10,
+                            "x": 259,
+                            "y": 343
+                        },
+                        "id": "61:51",
+                        "name": "Ellipse 4",
+                        "styles": {
+                            "fillStyle": "Semantic / 2",
+                            "fills": [
+                                "#0890fe"
+                            ]
+                        },
+                        "type": "ELLIPSE"
+                    }
+                ],
+                "id": "327:34644",
+                "name": "Illustration",
+                "styles": {},
+                "type": "GROUP"
+            },
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 327,
+                    "x": 24,
+                    "y": 409
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 44,
+                            "width": 327,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "id": "I213:23283;109:170",
+                        "name": "Placeholder",
+                        "styles": {
+                            "cornerRadius": 15,
+                            "strokes": [
+                                "#cbcbcb"
+                            ]
+                        },
+                        "type": "RECTANGLE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 21,
+                            "width": 43,
+                            "x": 12,
+                            "y": 12
+                        },
+                        "characters": "Name",
+                        "id": "I213:23283;109:171",
+                        "name": "Name",
+                        "styles": {
+                            "fillStyle": "Neutral/4",
+                            "fills": [
+                                "#cacaca"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 14,
+                            "fontStyle": "Medium",
+                            "fontWeight": 500,
+                            "lineHeight": {
+                                "unit": "PERCENT",
+                                "value": 150
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Body / 3"
+                        },
+                        "type": "TEXT"
+                    },
+                    {
+                        "bounds": {
+                            "height": 24,
+                            "width": 24,
+                            "x": 293,
+                            "y": 10
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 17.18,
+                                    "width": 8.35,
+                                    "x": 7.83,
+                                    "y": 3.41
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 5.17,
+                                            "width": 8.34,
+                                            "x": 7.83,
+                                            "y": 3.41
+                                        },
+                                        "id": "I213:23283;594:7;594:5",
+                                        "name": "Path",
+                                        "styles": {
+                                            "fills": [
+                                                "#dadada"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 5.17,
+                                            "width": 8.34,
+                                            "x": 7.84,
+                                            "y": 15.42
+                                        },
+                                        "id": "I213:23283;594:7;594:6",
+                                        "name": "Path",
+                                        "styles": {
+                                            "fills": [
+                                                "#dadada"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    }
+                                ],
+                                "id": "I213:23283;594:7;594:4",
+                                "name": "icon/navigation/unfold_more_24px",
+                                "styles": {
+                                    "fillStyle": "Black — Inactive",
+                                    "fills": [
+                                        "#0000008a"
+                                    ]
+                                },
+                                "type": "BOOLEAN_OPERATION"
+                            }
+                        ],
+                        "id": "I213:23283;594:7",
+                        "name": "Icon",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 16,
+                            "width": 49,
+                            "x": 12,
+                            "y": 52
+                        },
+                        "characters": "Caption",
+                        "id": "I213:23283;388:1699",
+                        "name": "Caption",
+                        "styles": {
+                            "fillStyle": "Primary / 1",
+                            "fills": [
+                                "#3629b7"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 12,
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "lineHeight": {
+                                "unit": "PIXELS",
+                                "value": 16
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Caption / 1"
+                        },
+                        "type": "TEXT"
+                    }
+                ],
+                "id": "213:23283",
+                "name": "Text field / Default",
+                "styles": {
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 704,
+                    "width": 375,
+                    "x": 0,
+                    "y": 108
+                },
+                "id": "61:41",
+                "name": "Rectangle 33",
+                "styles": {
+                    "cornerRadius": "mixed",
+                    "fills": [
+                        "#ffffff"
+                    ]
+                },
+                "type": "RECTANGLE"
+            },
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 327,
+                    "x": 24,
+                    "y": 473
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 44,
+                            "width": 327,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "id": "I213:23294;109:170",
+                        "name": "Placeholder",
+                        "styles": {
+                            "cornerRadius": 15,
+                            "strokes": [
+                                "#cbcbcb"
+                            ]
+                        },
+                        "type": "RECTANGLE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 21,
+                            "width": 69,
+                            "x": 12,
+                            "y": 12
+                        },
+                        "characters": "Text input",
+                        "id": "I213:23294;109:171",
+                        "name": "Text input",
+                        "styles": {
+                            "fillStyle": "Neutral/4",
+                            "fills": [
+                                "#cacaca"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 14,
+                            "fontStyle": "Medium",
+                            "fontWeight": 500,
+                            "lineHeight": {
+                                "unit": "PERCENT",
+                                "value": 150
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Body / 3"
+                        },
+                        "type": "TEXT"
+                    },
+                    {
+                        "bounds": {
+                            "height": 24,
+                            "width": 24,
+                            "x": 293,
+                            "y": 10
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 17.18,
+                                    "width": 8.35,
+                                    "x": 7.83,
+                                    "y": 3.41
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 5.17,
+                                            "width": 8.34,
+                                            "x": 7.83,
+                                            "y": 3.41
+                                        },
+                                        "id": "I213:23294;594:7;594:5",
+                                        "name": "Path",
+                                        "styles": {
+                                            "fills": [
+                                                "#dadada"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 5.17,
+                                            "width": 8.34,
+                                            "x": 7.84,
+                                            "y": 15.42
+                                        },
+                                        "id": "I213:23294;594:7;594:6",
+                                        "name": "Path",
+                                        "styles": {
+                                            "fills": [
+                                                "#dadada"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    }
+                                ],
+                                "id": "I213:23294;594:7;594:4",
+                                "name": "icon/navigation/unfold_more_24px",
+                                "styles": {
+                                    "fillStyle": "Black — Inactive",
+                                    "fills": [
+                                        "#0000008a"
+                                    ]
+                                },
+                                "type": "BOOLEAN_OPERATION"
+                            }
+                        ],
+                        "id": "I213:23294;594:7",
+                        "name": "Icon",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 16,
+                            "width": 49,
+                            "x": 12,
+                            "y": 52
+                        },
+                        "characters": "Caption",
+                        "id": "I213:23294;388:1699",
+                        "name": "Caption",
+                        "styles": {
+                            "fillStyle": "Primary / 1",
+                            "fills": [
+                                "#3629b7"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 12,
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "lineHeight": {
+                                "unit": "PIXELS",
+                                "value": 16
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Caption / 1"
+                        },
+                        "type": "TEXT"
+                    }
+                ],
+                "id": "213:23294",
+                "name": "Text field / Default",
+                "styles": {
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 327,
+                    "x": 24,
+                    "y": 537
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 44,
+                            "width": 327,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "id": "I213:23284;109:173",
+                        "name": "Placeholder",
+                        "styles": {
+                            "cornerRadius": 15,
+                            "strokes": [
+                                "#cbcbcb"
+                            ]
+                        },
+                        "type": "RECTANGLE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 21,
+                            "width": 69,
+                            "x": 12,
+                            "y": 12
+                        },
+                        "characters": "Password",
+                        "id": "I213:23284;109:174",
+                        "name": "Password",
+                        "styles": {
+                            "fillStyle": "Neutral/4",
+                            "fills": [
+                                "#cacaca"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 14,
+                            "fontStyle": "Medium",
+                            "fontWeight": 500,
+                            "lineHeight": {
+                                "unit": "PERCENT",
+                                "value": 150
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Body / 3"
+                        },
+                        "type": "TEXT"
+                    },
+                    {
+                        "bounds": {
+                            "height": 16,
+                            "width": 16,
+                            "x": 296,
+                            "y": 14
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 16,
+                                    "width": 16,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 8.28,
+                                            "width": 15.22,
+                                            "x": 0.39,
+                                            "y": 3.72
+                                        },
+                                        "children": [
+                                            {
+                                                "bounds": {
+                                                    "height": 8.28,
+                                                    "width": 15.22,
+                                                    "x": 0.39,
+                                                    "y": 3.72
+                                                },
+                                                "id": "I213:23284;389:5129;389:5115;180:2",
+                                                "name": "Vector",
+                                                "styles": {
+                                                    "fillStyle": "Neutral/4",
+                                                    "fills": [
+                                                        "#cacaca"
+                                                    ]
+                                                },
+                                                "type": "VECTOR"
+                                            }
+                                        ],
+                                        "id": "I213:23284;389:5129;389:5115;180:1",
+                                        "name": "Group",
+                                        "styles": {},
+                                        "type": "GROUP"
+                                    }
+                                ],
+                                "id": "I213:23284;389:5129;389:5115",
+                                "name": "icons/down-arrow 2",
+                                "styles": {
+                                    "fills": [
+                                        "#ffffff"
+                                    ],
+                                    "padding": {
+                                        "bottom": 0,
+                                        "left": 0,
+                                        "right": 0,
+                                        "top": 0
+                                    }
+                                },
+                                "type": "INSTANCE"
+                            }
+                        ],
+                        "id": "I213:23284;389:5129",
+                        "name": "\bIcon / 40",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 16,
+                            "width": 49,
+                            "x": 0,
+                            "y": 52
+                        },
+                        "characters": "Caption",
+                        "id": "I213:23284;388:2446",
+                        "name": "Caption",
+                        "styles": {
+                            "fillStyle": "Primary / 1",
+                            "fills": [
+                                "#3629b7"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 12,
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "lineHeight": {
+                                "unit": "PIXELS",
+                                "value": 16
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Caption / 1"
+                        },
+                        "type": "TEXT"
+                    }
+                ],
+                "id": "213:23284",
+                "name": "Text field / Default - Icon right",
+                "styles": {
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 40,
+                    "width": 289,
+                    "x": 24,
+                    "y": 601
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 24,
+                            "width": 24,
+                            "x": 24,
+                            "y": 601
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 24,
+                                    "width": 24,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "id": "I213:23297;122:1885",
+                                "name": "Rectangle/dissable",
+                                "styles": {
+                                    "cornerRadius": 4,
+                                    "strokes": [
+                                        "#bfbfbf"
+                                    ]
+                                },
+                                "type": "RECTANGLE"
+                            }
+                        ],
+                        "id": "213:23297",
+                        "name": "\bIcon / 47",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 40,
+                            "width": 253,
+                            "x": 60,
+                            "y": 601
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 40,
+                                    "width": 253,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "characters": "By creating an account your aggree\nto our  Term and Condtions",
+                                "id": "61:233",
+                                "name": "By creating an account your aggree to our Term and Condtions",
+                                "styles": {
+                                    "fills": "mixed",
+                                    "fontFamily": "mixed",
+                                    "fontSize": "mixed",
+                                    "fontStyle": "mixed",
+                                    "fontWeight": "mixed",
+                                    "lineHeight": "mixed",
+                                    "textAlignHorizontal": "LEFT"
+                                },
+                                "type": "TEXT"
+                            }
+                        ],
+                        "id": "2026:23766",
+                        "name": "By creating an account your aggree to our Term and Condtions",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "COMPONENT"
+                    }
+                ],
+                "id": "213:23301",
+                "name": "Term and Condtions",
+                "styles": {},
+                "type": "GROUP"
+            },
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 327,
+                    "x": 24,
+                    "y": 673
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 44,
+                            "width": 327,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "id": "I61:234;57:21410",
+                        "name": "Rectangle 43",
+                        "styles": {
+                            "cornerRadius": 15,
+                            "fillStyle": "Primary / 4",
+                            "fills": [
+                                "#f2f1f9"
+                            ]
+                        },
+                        "type": "RECTANGLE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 24,
+                            "width": 60,
+                            "x": 132.82,
+                            "y": 10
+                        },
+                        "characters": "Sign up",
+                        "id": "I61:234;57:21411",
+                        "name": "Sign up",
+                        "styles": {
+                            "fillStyle": "Neutral / 6",
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontStyle": "Medium",
+                            "fontWeight": 500,
+                            "lineHeight": {
+                                "unit": "PIXELS",
+                                "value": 24
+                            },
+                            "textAlignHorizontal": "CENTER",
+                            "textStyle": "Body / 1"
+                        },
+                        "type": "TEXT"
+                    }
+                ],
+                "id": "61:234",
+                "name": "Button / Primary / Dissable",
+                "styles": {
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 110,
+                    "x": 106,
+                    "y": 749
+                },
+                "characters": "Have an account? ",
+                "id": "213:23303",
+                "name": "UI Text/Heading/H4/G",
+                "styles": {
+                    "fillStyle": "Neutral / 1",
+                    "fills": [
+                        "#343434"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 12,
+                    "fontStyle": "Regular",
+                    "fontWeight": 400,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 16
+                    },
+                    "textAlignHorizontal": "LEFT"
+                },
+                "type": "TEXT"
+            },
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 41,
+                    "x": 228,
+                    "y": 749
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 16,
+                            "width": 41,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "characters": "Sign In",
+                        "id": "I379:89;379:42",
+                        "name": "Link",
+                        "styles": {
+                            "fillStyle": "Primary / 1",
+                            "fills": [
+                                "#3629b7"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 12,
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "lineHeight": {
+                                "unit": "PIXELS",
+                                "value": 16
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Caption / 1"
+                        },
+                        "type": "TEXT"
+                    }
+                ],
+                "id": "379:89",
+                "name": "Button / Link",
+                "styles": {
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 34,
+                    "width": 375,
+                    "x": 0,
+                    "y": 778
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 5,
+                            "width": 134,
+                            "x": 121,
+                            "y": 20
+                        },
+                        "id": "I283:39451;97:1864",
+                        "name": "Rectangle 24",
+                        "styles": {
+                            "cornerRadius": 100,
+                            "fillStyle": "Neutral/4",
+                            "fills": [
+                                "#cacaca"
+                            ]
+                        },
+                        "type": "RECTANGLE"
+                    }
+                ],
+                "id": "283:39451",
+                "name": "System / TabBar / Display Down",
+                "styles": {
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            }
+        ],
+        "id": "54:21277",
+        "name": "Sign up #1",
+        "styles": {
+            "fillStyle": "Primary / 1",
+            "fills": [
+                "#3629b7"
+            ],
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "FRAME"
+    }
+]
