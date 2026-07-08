@@ -105,7 +105,13 @@ def make_it_pretty(raw_result):
 def slugify(text):
     """
     Slugifies names into clean kebab-case.
+    Handles camelCase, PascalCase, spaces, and hyphens.
     """
+    # Insert hyphens between lowercase/digits and uppercase letters
+    text = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', text)
+    # Handle consecutive capitals (acronyms) followed by lowercase
+    text = re.sub(r'([A-Z])([A-Z][a-z])', r'\1-\2', text)
+    
     text = text.lower()
     text = re.sub(r'[^a-z0-9\s-]', '', text)
     text = re.sub(r'[\s-]+', '-', text)
