@@ -142,10 +142,16 @@ export default function SignUpScreen() {
                 style={[
                   styles.checkboxBox,
                   { borderColor: agree ? activeColors.primary : "#bfbfbf" },
-                  agree && { backgroundColor: activeColors.primary },
                 ]}
               >
-                {agree && <View style={styles.checkboxCheckInner} />}
+                {agree && (
+                  <Image
+                    source={Icons.check}
+                    style={styles.checkboxCheckIcon}
+                    tintColor={activeColors.primary}
+                    contentFit="contain"
+                  />
+                )}
               </View>
               <Text
                 style={[styles.checkboxLabel, { color: activeColors.text }]}
@@ -254,11 +260,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 2,
   },
-  checkboxCheckInner: {
-    width: 10,
-    height: 10,
-    backgroundColor: "#ffffff",
-    borderRadius: 2,
+  checkboxCheckIcon: {
+    width: 16,
+    height: 16,
   },
   checkboxLabel: {
     fontFamily: "Poppins-Regular",
@@ -268,7 +272,7 @@ const styles = StyleSheet.create({
   },
   signUpButton: {
     alignSelf: "stretch",
-    marginBottom: 24,
+    marginBottom: 32,
   },
   signInRow: {
     flexDirection: "row",

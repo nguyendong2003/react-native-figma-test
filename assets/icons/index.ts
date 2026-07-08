@@ -6,6 +6,7 @@ export const Icons = {
   signupIllustration: require('./signup-illustration.svg'),
   fingerprint: require('./fingerprint.svg'),
   eye: require('./eye.svg'),
+  check: require('./check.svg'),
 } as const;
 
 export type IconType = keyof typeof Icons;
