@@ -51,6 +51,6 @@ When instructed to run `fe-gen-component <ComponentName>`, perform the following
    <View style={[styles.container, style]}>
    ```
 
-### Step 6: Code Verification & Git Commit
+### Step 6: Code Verification
 1. Verify files with TypeScript compilation (`npx tsc --noEmit`) and linting (`npm run lint`).
-2. Commit your changes following `git-guidelines.md`.
+2. Notify the developer that the component is ready. Staging and committing changes is handled entirely by the developer.

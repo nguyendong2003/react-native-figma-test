@@ -6,15 +6,14 @@ This document explains how to utilize the custom developer workflows and agent s
 
 ## 1. Directory of Agent Skills (`.agents/skills/`)
 
-The layout generation pipeline is guided by 8 coordinated skill files:
+The layout generation pipeline is guided by 7 coordinated skill files:
 1. **[fe-gen-screen.md](.agents/skills/fe-gen-screen.md)**: Coordinates the high-level workflow for generating new screen layouts.
 2. **[fe-gen-component.md](.agents/skills/fe-gen-component.md)**: Coordinates the high-level workflow for generating reusable components.
 3. **[naming-conventions.md](.agents/skills/naming-conventions.md)**: Defines naming standards (files, folders, variables, stylesheet rules) and TypeScript typing practices.
-4. **[git-guidelines.md](.agents/skills/git-guidelines.md)**: Enforces Git branching conventions and Conventional Commit formats.
-5. **[parse-layout.md](.agents/skills/parse-layout.md)**: Explains coordinate translation, Flexbox row/column parsing, and layout spacing math.
-6. **[style-mapper.md](.agents/skills/style-mapper.md)**: Details mapping color (`fillStyle`) and text (`textStyle`) tokens from Figma to the project theme.
-7. **[asset-manager.md](.agents/skills/asset-manager.md)**: Automates image/icon exports (SVG/PNG) from Figma and registers them in the asset registries.
-8. **[component-extractor.md](.agents/skills/component-extractor.md)**: Governs layout decomposition, component mapping, and the component reuse rules.
+4. **[parse-layout.md](.agents/skills/parse-layout.md)**: Explains coordinate translation, Flexbox row/column parsing, and layout spacing math.
+5. **[style-mapper.md](.agents/skills/style-mapper.md)**: Details mapping color (`fillStyle`) and text (`textStyle`) tokens from Figma to the project theme.
+6. **[asset-manager.md](.agents/skills/asset-manager.md)**: Automates image/icon exports (SVG/PNG) from Figma and registers them in the asset registries.
+7. **[component-extractor.md](.agents/skills/component-extractor.md)**: Governs layout decomposition, component mapping, and the component reuse rules.
 
 ---
 
@@ -56,7 +55,7 @@ All code generation is executed by **prompting the AI Agent in the chat UI**. Th
    - The agent automatically executes: `python3 test_figma_mcp.py --screen explore`.
    - The script saves design metadata to `output/explore/layout.json` and exports a PNG screenshot.
    - The agent decomposes the layout, scans for existing reusable components, loads typography presets, and writes the screen layout in `src/app/explore.tsx`.
-   - The agent runs typecheck validation (`npx tsc --noEmit`) and commits all changes automatically using Conventional Commit standards.
+   - The agent runs typecheck validation (`npx tsc --noEmit`). The developer handles staging and committing all changes.
 
 ---
 

@@ -52,7 +52,7 @@ When instructed to run `fe-gen-screen <screen-name>`, perform the following sequ
 3. Import the shared theme, extracted sub-components, and registered assets.
 4. Ensure layout wrappers use safe area contexts (`react-native-safe-area-context`) where needed.
 
-### Step 7: Verify and Commit
+### Step 7: Verification
 
 1. Verify the layout: run TypeScript checking (`npx tsc --noEmit`) and linting (`npm run lint`).
-2. Follow `git-guidelines.md` to commit the created and modified files.
+2. Notify the developer that the screen is ready. Staging and committing changes is handled entirely by the developer.
