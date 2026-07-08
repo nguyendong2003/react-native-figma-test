@@ -1,0 +1,474 @@
+{
+    "effects": [
+        {
+            "effects": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "a": 0.07000000029802322,
+                        "b": 0.7176470756530762,
+                        "g": 0.16078431904315948,
+                        "r": 0.21176470816135406
+                    },
+                    "offset": {
+                        "x": 0,
+                        "y": -5
+                    },
+                    "radius": 30,
+                    "showShadowBehindNode": true,
+                    "spread": 0,
+                    "type": "DROP_SHADOW",
+                    "visible": true
+                }
+            ],
+            "id": "S:0cfe009427bd0028fe0e544731ae249b76dd148b,",
+            "name": "Tab bar"
+        },
+        {
+            "effects": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "a": 0.07000000029802322,
+                        "b": 0.7176470756530762,
+                        "g": 0.16078431904315948,
+                        "r": 0.21176470816135406
+                    },
+                    "offset": {
+                        "x": 0,
+                        "y": 4
+                    },
+                    "radius": 30,
+                    "showShadowBehindNode": true,
+                    "spread": 0,
+                    "type": "DROP_SHADOW",
+                    "visible": true
+                }
+            ],
+            "id": "S:f4c58e15877115d5ae70201fe296792bcdcf0560,",
+            "name": "Card / 1"
+        },
+        {
+            "effects": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "a": 0.05000000074505806,
+                        "b": 0,
+                        "g": 0,
+                        "r": 0
+                    },
+                    "offset": {
+                        "x": 0,
+                        "y": 5
+                    },
+                    "radius": 30,
+                    "showShadowBehindNode": true,
+                    "spread": 0,
+                    "type": "DROP_SHADOW",
+                    "visible": true
+                }
+            ],
+            "id": "S:de8fee71f70351aa72bc73ee64548e4246eaafaf,",
+            "name": "Card / 2"
+        }
+    ],
+    "grids": [],
+    "paints": [
+        {
+            "id": "S:a65099703904896a8c9a59df2972f23487fe866a,",
+            "name": "Primary / 1",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.7166666388511658,
+                        "g": 0.16124999523162842,
+                        "r": 0.21291668713092804
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:5fe7e4e1b7ebf5250afa3e3de0f771f6eaa0faa7,",
+            "name": "Primary / 2",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.7254902124404907,
+                        "g": 0.3333333432674408,
+                        "r": 0.33725491166114807
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:33edd187a39e27c1ccb1401af0ef8d3a55eefec2,",
+            "name": "Primary / 3",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.843137264251709,
+                        "g": 0.6392157077789307,
+                        "r": 0.658823549747467
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:1b7241245bf1c3061b51329eb4938cc3b578c3d8,",
+            "name": "Primary / 4",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.9750000238418579,
+                        "g": 0.94580078125,
+                        "r": 0.9485816359519958
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:0726eacfed5d882d309ba237a72e752929a35fa5,",
+            "name": "Neutral / 1",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.20319010317325592,
+                        "g": 0.20319010317325592,
+                        "r": 0.20319010317325592
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:0d8da253b0b0a7274e3894f5f9fe08816a5ff614,",
+            "name": "Neutral / 2",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.5372549295425415,
+                        "g": 0.5372549295425415,
+                        "r": 0.5372549295425415
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:8b3dbe5e32576bb679189ab33f8ecdd73267a89b,",
+            "name": "Neutral / 3",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.5948567986488342,
+                        "g": 0.5948567986488342,
+                        "r": 0.5948567986488342
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:c41620c4f2051ea035a3a9bf36d6a79e2311c6f7,",
+            "name": "Neutral/4",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.7920572757720947,
+                        "g": 0.7920572757720947,
+                        "r": 0.7920572757720947
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:321be23baae7c8ddd1615fe33280a5faf2fdcd78,",
+            "name": "Neutral / 5",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.878000020980835,
+                        "g": 0.878000020980835,
+                        "r": 0.878000020980835
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:fc19093c7669f17367249b1340352768e059c8e0,",
+            "name": "Neutral / 6",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 1,
+                        "g": 1,
+                        "r": 1
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:a7ab3db7b93aabe30f77600666b4b120a417e67e,",
+            "name": "Semantic / 1",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.40392157435417175,
+                        "g": 0.25882354378700256,
+                        "r": 1
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:88f4138a1a2871d389f25d8137a7ce079d2c7425,",
+            "name": "Semantic / 2",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.9960784316062927,
+                        "g": 0.5647059082984924,
+                        "r": 0.0313725508749485
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:564b534ed4f3ae2d5f4b28103a2057e8a27f75f5,",
+            "name": "Semantic / 3",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.16470588743686676,
+                        "g": 0.686274528503418,
+                        "r": 1
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:9b4b328c96592b3bc3509b33fc8e8ef6e965819c,",
+            "name": "Semantic / 4",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.729411780834198,
+                        "g": 0.8352941274642944,
+                        "r": 0.32156863808631897
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        },
+        {
+            "id": "S:a1689f79922720989b02db210f8c6a9119f6389b,",
+            "name": "Semantic / 5",
+            "paints": [
+                {
+                    "blendMode": "NORMAL",
+                    "boundVariables": {},
+                    "color": {
+                        "b": 0.0941176488995552,
+                        "g": 0.41960784792900085,
+                        "r": 0.9843137264251709
+                    },
+                    "opacity": 1,
+                    "type": "SOLID",
+                    "visible": true
+                }
+            ]
+        }
+    ],
+    "text": [
+        {
+            "fontFamily": "Poppins",
+            "fontSize": 24,
+            "fontStyle": "SemiBold",
+            "id": "S:bea1c57d4065c1b4e8a18e2319ca98f84cc87f92,",
+            "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+            },
+            "lineHeight": {
+                "unit": "PIXELS",
+                "value": 28
+            },
+            "name": "Title/1"
+        },
+        {
+            "fontFamily": "Poppins",
+            "fontSize": 20,
+            "fontStyle": "SemiBold",
+            "id": "S:0d1d932d63b650c47fb59dfd3097fbd88fbc6b81,",
+            "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+            },
+            "lineHeight": {
+                "unit": "PIXELS",
+                "value": 28
+            },
+            "name": "Title/2"
+        },
+        {
+            "fontFamily": "Poppins",
+            "fontSize": 16,
+            "fontStyle": "SemiBold",
+            "id": "S:07dccab04082e1ae309d82062be834d07e1187ae,",
+            "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+            },
+            "lineHeight": {
+                "unit": "PIXELS",
+                "value": 24
+            },
+            "name": "Title / 3"
+        },
+        {
+            "fontFamily": "Poppins",
+            "fontSize": 12,
+            "fontStyle": "SemiBold",
+            "id": "S:d39e6b3f1ce73be397bef66e75cf54516a62b4e7,",
+            "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+            },
+            "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+            },
+            "name": "Caption / 1"
+        },
+        {
+            "fontFamily": "Poppins",
+            "fontSize": 12,
+            "fontStyle": "Medium",
+            "id": "S:e0cf20b492cb81076cb196c4f7fe6f4386135493,",
+            "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+            },
+            "lineHeight": {
+                "unit": "PIXELS",
+                "value": 16
+            },
+            "name": "Caption/2"
+        },
+        {
+            "fontFamily": "Poppins",
+            "fontSize": 16,
+            "fontStyle": "Medium",
+            "id": "S:b922f5585774624f69e4af2be155b9e7a5074414,",
+            "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+            },
+            "lineHeight": {
+                "unit": "PIXELS",
+                "value": 24
+            },
+            "name": "Body / 1"
+        },
+        {
+            "fontFamily": "Poppins",
+            "fontSize": 16,
+            "fontStyle": "Regular",
+            "id": "S:b7aab31a5575842b44d23f0014dc940b005ed5c2,",
+            "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+            },
+            "lineHeight": {
+                "unit": "PIXELS",
+                "value": 24
+            },
+            "name": "Body / 2"
+        },
+        {
+            "fontFamily": "Poppins",
+            "fontSize": 14,
+            "fontStyle": "Medium",
+            "id": "S:6991457d31937e16ce5e3c411d2e8f6bb939678a,",
+            "letterSpacing": {
+                "unit": "PIXELS",
+                "value": 0
+            },
+            "lineHeight": {
+                "unit": "PERCENT",
+                "value": 150
+            },
+            "name": "Body / 3"
+        }
+    ]
+}
