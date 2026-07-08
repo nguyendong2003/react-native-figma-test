@@ -11,7 +11,7 @@ When instructed to run `fe-gen-component <ComponentName>`, perform the following
    ```bash
    python3 test_figma_mcp.py --component <ComponentName>
    ```
-2. Verify that the output directory `output/common/<component_name_kebab_case>/` contains:
+2. Verify that the output directory `output/common/<component-name-kebab-case>/` contains:
    - `layout.json` (the geometric-sorted component selection tree).
    - `screenshot.png` representing the design.
 3. If the command fails (e.g., due to no selection on Figma Desktop), report the error to the user and prompt them to select the target component on Figma Desktop, then rerun the command.
@@ -30,10 +30,10 @@ When instructed to run `fe-gen-component <ComponentName>`, perform the following
 
 ### Step 4: Extract Assets
 1. Check if the component contains custom vectors, logos, or icons.
-2. Follow `asset_manager.md` to export new assets directly into `assets/icons/` or `assets/images/` and update registries.
+2. Follow `asset-manager.md` to export new assets directly into `assets/icons/` or `assets/images/` and update registries.
 
 ### Step 5: Implement Component Code
-1. Create/update the file directly under `src/components/` (e.g., `src/components/MyButton.tsx` or `src/components/my-button/index.tsx`). Do **not** use a `src/components/ui/` folder.
+1. Create/update the file directly under `src/components/` (e.g., `src/components/MyButton.tsx` or `src/components/my-button/MyButton.tsx`). Do **not** use a `src/components/ui/` folder.
 2. Define strong TypeScript typings for props (**strictly do not use `any`**):
    ```typescript
    import { StyleProp, ViewStyle } from 'react-native';
@@ -45,7 +45,7 @@ When instructed to run `fe-gen-component <ComponentName>`, perform the following
      style?: StyleProp<ViewStyle>; // Allow style overrides
    }
    ```
-3. Use the `parse_layout.md` skill to map JSON boundaries, corner radiuses, paddings, shadows, and text parameters to `StyleSheet.create`.
+3. Use the `parse-layout.md` skill to map JSON boundaries, corner radiuses, paddings, shadows, and text parameters to `StyleSheet.create`.
 4. Support layout overrides by combining parent-passed styles:
    ```typescript
    <View style={[styles.container, style]}>
@@ -53,4 +53,4 @@ When instructed to run `fe-gen-component <ComponentName>`, perform the following
 
 ### Step 6: Code Verification & Git Commit
 1. Verify files with TypeScript compilation (`npx tsc --noEmit`) and linting (`npm run lint`).
-2. Commit your changes following `git_guidelines.md`.
+2. Commit your changes following `git-guidelines.md`.

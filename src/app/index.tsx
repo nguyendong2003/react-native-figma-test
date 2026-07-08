@@ -1,3 +1,4 @@
+import { Colors } from '@/constants/theme';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen() {
@@ -18,6 +19,6 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'Poppins-Medium',
     fontSize: 24,
-    color: '#333333',
+    color: Colors.light.primary1,
   },
 });

@@ -1,9 +1,20 @@
 :root {
-  --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-poppins: Poppins, sans-serif;
+
+  /* Figma Colors mapped to CSS Variables */
+  --color-primary-1: #3629b7;
+  --color-primary-2: #5655b9;
+  --color-primary-3: #a8a3d7;
+  --color-primary-4: #f2f1f9;
+  --color-neutral-1: #343434;
+  --color-neutral-2: #898989;
+  --color-neutral-3: #989898;
+  --color-neutral-4: #cacaca;
+  --color-neutral-5: #e0e0e0;
+  --color-neutral-6: #ffffff;
+  --color-semantic-1: #ff4267;
+  --color-semantic-2: #0890fe;
+  --color-semantic-3: #ffaf2a;
+  --color-semantic-4: #52d5ba;
+  --color-semantic-5: #fb6b18;
 }

@@ -1,6 +1,6 @@
 # Skill: Figma Style to Theme Mapper
 
-This skill details how to map exported Figma design styles (colors, typography, shadow effects) into the project's centralized theme system in `src/constants/theme.ts`.
+This skill details how to map exported Figma design styles (colors, typography, shadow effects) into the project's centralized theme system in `src/constants/theme.ts` and styling variables in `src/global.css`.
 
 Before running the mapper, the agent must follow these rules regarding the styles file:
 1. **Check file existence**: Check if `output/figma_styles.json` exists.
@@ -57,6 +57,22 @@ export const Colors = {
     placeholder: '#555555',
     // ... other mappings
   }
+}
+```
+
+### Update `src/global.css`
+Also define the extracted color variables under the `:root` selector in `src/global.css`. Use kebab-case format starting with `--color-` prefix:
+- `Primary / 1` $\rightarrow$ `--color-primary-1: #3629b7;`
+- `Neutral / 4` $\rightarrow$ `--color-neutral-4: #cacaca;`
+
+```css
+:root {
+  /* ... existing variables */
+  --font-poppins: Poppins, sans-serif;
+
+  /* Figma Colors mapped to CSS Variables */
+  --color-primary-1: #3629b7;
+  --color-neutral-4: #cacaca;
 }
 ```
 

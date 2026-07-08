@@ -85,7 +85,7 @@ When parsing a screen `layout.json`, you will encounter nodes of type `INSTANCE`
 1. **Identify the Component**: Map the `INSTANCE` node name to the corresponding component (e.g., `"Text field / Default"` or `"Text field / Default - Icon right"` $\rightarrow$ `<TextField />`).
 2. **Scan Children for Props**:
    - **Label/Placeholder**: A child node of `type: "TEXT"` named `"Password"` or `"Text input"` has `characters` that represent the component's `placeholder`, `label`, or initial `value`.
-   - **Icon**: A child representing an icon (e.g. named `"Icon"` containing an instance of `"icons/down-arrow 2"`) maps to `rightIcon="downArrow"` (based on `asset_manager.md` exports).
+   - **Icon**: A child representing an icon (e.g. named `"Icon"` containing an instance of `"icons/down-arrow 2"`) maps to `rightIcon="downArrow"` (based on `asset-manager.md` exports).
    - **Helper/Caption**: A child node of `type: "TEXT"` named `"Caption"` maps to `helperText` or `errorText`.
 3. **Write the Component Mapping**:
    ```typescript

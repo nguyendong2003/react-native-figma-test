@@ -9,12 +9,12 @@ This document explains how to utilize the custom developer workflows and agent s
 The layout generation pipeline is guided by 8 coordinated skill files:
 1. **[fe-gen-screen.md](.agents/skills/fe-gen-screen.md)**: Coordinates the high-level workflow for generating new screen layouts.
 2. **[fe-gen-component.md](.agents/skills/fe-gen-component.md)**: Coordinates the high-level workflow for generating reusable components.
-3. **[naming_conventions.md](.agents/skills/naming_conventions.md)**: Defines naming standards (files, folders, variables, stylesheet rules) and TypeScript typing practices.
-4. **[git_guidelines.md](.agents/skills/git_guidelines.md)**: Enforces Git branching conventions and Conventional Commit formats.
-5. **[parse_layout.md](.agents/skills/parse_layout.md)**: Explains coordinate translation, Flexbox row/column parsing, and layout spacing math.
-6. **[style_mapper.md](.agents/skills/style_mapper.md)**: Details mapping color (`fillStyle`) and text (`textStyle`) tokens from Figma to the project theme.
-7. **[asset_manager.md](.agents/skills/asset_manager.md)**: Automates image/icon exports (SVG/PNG) from Figma and registers them in the asset registries.
-8. **[component_extractor.md](.agents/skills/component_extractor.md)**: Governs layout decomposition, component mapping, and the component reuse rules.
+3. **[naming-conventions.md](.agents/skills/naming-conventions.md)**: Defines naming standards (files, folders, variables, stylesheet rules) and TypeScript typing practices.
+4. **[git-guidelines.md](.agents/skills/git-guidelines.md)**: Enforces Git branching conventions and Conventional Commit formats.
+5. **[parse-layout.md](.agents/skills/parse-layout.md)**: Explains coordinate translation, Flexbox row/column parsing, and layout spacing math.
+6. **[style-mapper.md](.agents/skills/style-mapper.md)**: Details mapping color (`fillStyle`) and text (`textStyle`) tokens from Figma to the project theme.
+7. **[asset-manager.md](.agents/skills/asset-manager.md)**: Automates image/icon exports (SVG/PNG) from Figma and registers them in the asset registries.
+8. **[component-extractor.md](.agents/skills/component-extractor.md)**: Governs layout decomposition, component mapping, and the component reuse rules.
 
 ---
 
@@ -24,7 +24,7 @@ All code generation is executed by **prompting the AI Agent in the chat UI**. Th
 
 ### Step 1: Initialize the Design System & Colors (Theme Setup)
 1. **Trigger Word**: Type this in the chat:
-   > *"Run style_mapper"* or *"Update theme.ts from Figma"*
+   > *"Run style-mapper"* or *"Update theme.ts from Figma"*
 2. **How it works**:
    - The agent checks if the styles file `output/figma_styles.json` exists.
    - If the file **exists**, the agent reads it directly to update `src/constants/theme.ts` without executing the Python export script (saving Figma API calls).

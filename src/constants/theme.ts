@@ -1,65 +1,165 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Figma Paint Styles mapped directly to hex values.
  */
+export const FigmaColors = {
+  primary1: '#3629b7',
+  primary2: '#5655b9',
+  primary3: '#a8a3d7',
+  primary4: '#f2f1f9',
+  neutral1: '#343434',
+  neutral2: '#898989',
+  neutral3: '#989898',
+  neutral4: '#cacaca',
+  neutral5: '#e0e0e0',
+  neutral6: '#ffffff',
+  semantic1: '#ff4267',
+  semantic2: '#0890fe',
+  semantic3: '#ffaf2a',
+  semantic4: '#52d5ba',
+  semantic5: '#fb6b18',
+} as const;
 
-import '@/global.css';
-
-import { Platform } from 'react-native';
-
+/**
+ * Semantic theme colors for Light and Dark modes.
+ */
 export const Colors = {
   light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
+    primary: FigmaColors.primary1,
+    primaryLight: FigmaColors.primary4,
+    background: FigmaColors.neutral6,
+    surface: FigmaColors.neutral6,
+    text: FigmaColors.neutral1,
+    textMuted: FigmaColors.neutral2,
+    border: FigmaColors.neutral5,
+    placeholder: FigmaColors.neutral4,
+    success: FigmaColors.semantic4,
+    error: FigmaColors.semantic1,
+    warning: FigmaColors.semantic3,
+    info: FigmaColors.semantic2,
+    accent: FigmaColors.semantic5,
+    
+    // Direct token access
+    primary1: FigmaColors.primary1,
+    primary2: FigmaColors.primary2,
+    primary3: FigmaColors.primary3,
+    primary4: FigmaColors.primary4,
+    neutral1: FigmaColors.neutral1,
+    neutral2: FigmaColors.neutral2,
+    neutral3: FigmaColors.neutral3,
+    neutral4: FigmaColors.neutral4,
+    neutral5: FigmaColors.neutral5,
+    neutral6: FigmaColors.neutral6,
+    semantic1: FigmaColors.semantic1,
+    semantic2: FigmaColors.semantic2,
+    semantic3: FigmaColors.semantic3,
+    semantic4: FigmaColors.semantic4,
+    semantic5: FigmaColors.semantic5,
   },
   dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
+    primary: FigmaColors.primary2,
+    primaryLight: FigmaColors.neutral1,
+    background: FigmaColors.neutral1,
+    surface: '#1e1e1e',
+    text: FigmaColors.neutral6,
+    textMuted: FigmaColors.neutral3,
+    border: FigmaColors.neutral2,
+    placeholder: FigmaColors.neutral3,
+    success: FigmaColors.semantic4,
+    error: FigmaColors.semantic1,
+    warning: FigmaColors.semantic3,
+    info: FigmaColors.semantic2,
+    accent: FigmaColors.semantic5,
+
+    // Direct token access
+    primary1: FigmaColors.primary1,
+    primary2: FigmaColors.primary2,
+    primary3: FigmaColors.primary3,
+    primary4: FigmaColors.primary4,
+    neutral1: FigmaColors.neutral1,
+    neutral2: FigmaColors.neutral2,
+    neutral3: FigmaColors.neutral3,
+    neutral4: FigmaColors.neutral4,
+    neutral5: FigmaColors.neutral5,
+    neutral6: FigmaColors.neutral6,
+    semantic1: FigmaColors.semantic1,
+    semantic2: FigmaColors.semantic2,
+    semantic3: FigmaColors.semantic3,
+    semantic4: FigmaColors.semantic4,
+    semantic5: FigmaColors.semantic5,
   },
 } as const;
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
-
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
+/**
+ * Typography configurations mapping Figma Text Styles.
+ * Note: fontFamily is weight-specific to support both iOS and Android perfectly.
+ * We do not use fontWeight here since custom weight-specific fonts are loaded.
+ */
+export const Typography = {
+  title1: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 24,
+    lineHeight: 28,
   },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
+  title2: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 20,
+    lineHeight: 28,
   },
-  web: {
-    sans: 'var(--font-display)',
-    serif: 'var(--font-serif)',
-    rounded: 'var(--font-rounded)',
-    mono: 'var(--font-mono)',
+  title3: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 16,
+    lineHeight: 24,
   },
-});
-
-export const Spacing = {
-  half: 2,
-  one: 4,
-  two: 8,
-  three: 16,
-  four: 24,
-  five: 32,
-  six: 64,
+  caption1: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 12,
+    lineHeight: 16,
+  },
+  caption2: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: 12,
+    lineHeight: 16,
+  },
+  body1: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: 16,
+    lineHeight: 24,
+  },
+  body2: {
+    fontFamily: 'Poppins-Regular',
+    fontSize: 16,
+    lineHeight: 24,
+  },
+  body3: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: 14,
+    lineHeight: 21,
+  },
 } as const;
 
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
-export const MaxContentWidth = 800;
+/**
+ * Shadow presets parsed from Figma Drop Shadow styles.
+ */
+export const Shadows = {
+  tabBar: {
+    shadowColor: 'rgba(54, 41, 183, 0.07)',
+    shadowOffset: { width: 0, height: -5 },
+    shadowOpacity: 0.07,
+    shadowRadius: 30,
+    elevation: 4,
+  },
+  card1: {
+    shadowColor: 'rgba(54, 41, 183, 0.07)',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.07,
+    shadowRadius: 30,
+    elevation: 4,
+  },
+  card2: {
+    shadowColor: 'rgba(0, 0, 0, 0.05)',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.05,
+    shadowRadius: 30,
+    elevation: 4,
+  },
+} as const;

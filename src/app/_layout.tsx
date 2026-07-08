@@ -12,11 +12,11 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   const [loaded, error] = useFonts({
-    'Poppins-Regular': require('../../assets/fonts/Poppins/Poppins-Regular.ttf'),
-    'Poppins-Medium': require('../../assets/fonts/Poppins/Poppins-Medium.ttf'),
-    'Poppins-SemiBold': require('../../assets/fonts/Poppins/Poppins-SemiBold.ttf'),
-    'Poppins-Bold': require('../../assets/fonts/Poppins/Poppins-Bold.ttf'),
-    'Poppins-Black': require('../../assets/fonts/Poppins/Poppins-Black.ttf'),
+    'Poppins-Regular': require('../../assets/fonts/poppins/Poppins-Regular.ttf'),
+    'Poppins-Medium': require('../../assets/fonts/poppins/Poppins-Medium.ttf'),
+    'Poppins-SemiBold': require('../../assets/fonts/poppins/Poppins-SemiBold.ttf'),
+    'Poppins-Bold': require('../../assets/fonts/poppins/Poppins-Bold.ttf'),
+    'Poppins-Black': require('../../assets/fonts/poppins/Poppins-Black.ttf'),
   });
 
   useEffect(() => {
