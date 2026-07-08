@@ -1,32 +1,29 @@
-import React, { useState } from 'react';
+import { Icons } from "@/assets/icons";
+import { Button } from "@/components/Button";
+import { InputField } from "@/components/InputField";
+import { Typography } from "@/constants/theme";
+import { useTheme } from "@/context/ThemeContext";
+import { Image } from "expo-image";
+import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
 import {
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
+  Alert,
   KeyboardAvoidingView,
   Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
-  useColorScheme,
-  Alert,
-} from 'react-native';
-import { Image } from 'expo-image';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { StatusBar } from 'expo-status-bar';
-import { NavigationBar } from '@/components/NavigationBar';
-import { InputField } from '@/components/InputField';
-import { Button } from '@/components/Button';
-import { Icons } from '@/assets/icons';
-import { Colors, Typography } from '@/constants/theme';
+  View,
+} from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function SignInScreen() {
-  const colorScheme = useColorScheme();
-  const theme = colorScheme === 'dark' ? 'dark' : 'light';
-  const activeColors = Colors[theme];
+  const { theme, activeColors } = useTheme();
   const insets = useSafeAreaInsets();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -39,45 +36,39 @@ export default function SignInScreen() {
     // Simulate API Call
     setTimeout(() => {
       setLoading(false);
-      Alert.alert('Success', `Signed in as: ${email}`);
+      Alert.alert("Success", `Signed in as: ${email}`);
     }, 1500);
   };
 
   const handleFingerprintPress = () => {
-    Alert.alert('Biometric Authentication', 'Fingerprint scanner activated.');
+    Alert.alert("Biometric Authentication", "Fingerprint scanner activated.");
   };
 
   const handleForgotPassword = () => {
-    Alert.alert('Forgot Password', 'Password reset instructions have been sent.');
+    Alert.alert(
+      "Forgot Password",
+      "Password reset instructions have been sent.",
+    );
   };
 
   const handleSignUp = () => {
-    Alert.alert('Navigation', 'Navigate to Sign Up Screen.');
+    Alert.alert("Navigation", "Navigate to Sign Up Screen.");
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: theme === 'light' ? activeColors.primary1 : activeColors.background }]}>
+    <View
+      style={[
+        styles.container,
+        {
+          backgroundColor:
+            theme === "light" ? activeColors.primary1 : activeColors.background,
+        },
+      ]}
+    >
       <StatusBar style="light" />
-      
-      {/* Top Safe Area Spacing */}
-      <View style={{ height: insets.top, backgroundColor: theme === 'light' ? activeColors.primary1 : activeColors.background }} />
-      
-      {/* Navigation Header */}
-      <NavigationBar
-        title="Sign in"
-        showBackButton={true}
-        backButtonTint={theme === 'light' ? activeColors.neutral6 : activeColors.text}
-        style={{
-          backgroundColor: theme === 'light' ? activeColors.primary1 : activeColors.background,
-          borderBottomWidth: 0,
-        }}
-        titleStyle={{
-          color: theme === 'light' ? activeColors.neutral6 : activeColors.text,
-        }}
-      />
 
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.keyboardView}
       >
         <ScrollView
@@ -88,11 +79,13 @@ export default function SignInScreen() {
           <View style={styles.headerGap} />
 
           {/* White Body Card (Rectangle 33) */}
-          <View style={[styles.bodyCard, { backgroundColor: activeColors.surface }]}>
+          <View
+            style={[styles.bodyCard, { backgroundColor: activeColors.surface }]}
+          >
             <Text style={[styles.welcomeText, { color: activeColors.primary }]}>
               Welcome Back
             </Text>
-            
+
             <Text style={[styles.subtitleText, { color: activeColors.text }]}>
               Hello there, sign in to continue
             </Text>
@@ -107,7 +100,7 @@ export default function SignInScreen() {
             {/* Input Form Fields */}
             <View style={styles.formContainer}>
               <InputField
-                placeholder="Username or email"
+                placeholder="Text input"
                 value={email}
                 onChangeText={setEmail}
                 keyboardType="email-address"
@@ -128,13 +121,18 @@ export default function SignInScreen() {
             </View>
 
             {/* Forgot Password Link */}
-            <TouchableOpacity 
-              onPress={handleForgotPassword} 
+            <TouchableOpacity
+              onPress={handleForgotPassword}
               style={styles.forgotPasswordContainer}
               accessibilityRole="button"
               accessibilityLabel="Forgot your password"
             >
-              <Text style={[styles.forgotPasswordText, { color: activeColors.placeholder }]}>
+              <Text
+                style={[
+                  styles.forgotPasswordText,
+                  { color: activeColors.placeholder },
+                ]}
+              >
                 Forgot your password ?
               </Text>
             </TouchableOpacity>
@@ -157,22 +155,27 @@ export default function SignInScreen() {
             >
               <Image
                 source={Icons.fingerprint}
-                style={[styles.fingerprintIcon, { tintColor: activeColors.primary }]}
+                style={styles.fingerprintIcon}
+                tintColor={activeColors.primary}
                 contentFit="contain"
               />
             </TouchableOpacity>
 
             {/* Sign Up Link Row */}
             <View style={styles.signUpRow}>
-              <Text style={[styles.noAccountText, { color: activeColors.text }]}>
-                Don't have an account?{' '}
+              <Text
+                style={[styles.noAccountText, { color: activeColors.text }]}
+              >
+                Don't have an account?{" "}
               </Text>
-              <TouchableOpacity 
+              <TouchableOpacity
                 onPress={handleSignUp}
                 accessibilityRole="button"
                 accessibilityLabel="Sign Up"
               >
-                <Text style={[styles.signUpText, { color: activeColors.primary }]}>
+                <Text
+                  style={[styles.signUpText, { color: activeColors.primary }]}
+                >
                   Sign Up
                 </Text>
               </TouchableOpacity>
@@ -180,9 +183,14 @@ export default function SignInScreen() {
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
-      
+
       {/* Bottom Safe Area Padding */}
-      <View style={{ height: Math.max(12, insets.bottom), backgroundColor: activeColors.surface }} />
+      <View
+        style={{
+          height: Math.max(12, insets.bottom),
+          backgroundColor: activeColors.surface,
+        }}
+      />
     </View>
   );
 }
@@ -219,15 +227,15 @@ const styles = StyleSheet.create({
   illustration: {
     width: 213,
     height: 165,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginBottom: 32,
   },
   formContainer: {
     gap: 20,
-    alignSelf: 'stretch',
+    alignSelf: "stretch",
   },
   forgotPasswordContainer: {
-    alignSelf: 'flex-end',
+    alignSelf: "flex-end",
     marginTop: 12,
     marginBottom: 40,
   },
@@ -235,13 +243,13 @@ const styles = StyleSheet.create({
     ...Typography.caption2,
   },
   signInButton: {
-    alignSelf: 'stretch',
+    alignSelf: "stretch",
     marginBottom: 24,
   },
   fingerprintButton: {
-    alignSelf: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
     width: 64,
     height: 64,
     marginBottom: 24,
@@ -251,14 +259,14 @@ const styles = StyleSheet.create({
     height: 64,
   },
   signUpRow: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 'auto', // Push to bottom of content if there is extra space
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "auto", // Push to bottom of content if there is extra space
     paddingTop: 12,
   },
   noAccountText: {
-    fontFamily: 'Poppins-Regular',
+    fontFamily: "Poppins-Regular",
     fontSize: 12,
     lineHeight: 16,
   },

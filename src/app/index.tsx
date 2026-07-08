@@ -1,21 +1,35 @@
-import { Colors } from '@/constants/theme';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button } from '@/components/Button';
+import { Button } from "@/components/Button";
+import { useTheme } from "@/context/ThemeContext";
+import { router } from "expo-router";
+import { StyleSheet, Switch, Text, View } from "react-native";
 
 export default function HomeScreen() {
+  const { isDarkMode, toggleTheme, activeColors } = useTheme();
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello World</Text>
+    <View
+      style={[styles.container, { backgroundColor: activeColors.background }]}
+    >
+      <Text style={[styles.text, { color: activeColors.text }]}>
+        Hello World
+      </Text>
+
+      <View style={styles.toggleContainer}>
+        <Text style={[styles.toggleText, { color: activeColors.text }]}>
+          Dark Mode
+        </Text>
+        <Switch
+          value={isDarkMode}
+          onValueChange={toggleTheme}
+          trackColor={{ false: "#767577", true: activeColors.primary }}
+          thumbColor={isDarkMode ? "#ffffff" : "#f4f3f4"}
+        />
+      </View>
+
       <Button
         title="Sign in"
         style={styles.button}
-        onPress={() => console.log('Button pressed')}
-      />
-      <Button
-        title="Sign in"
-        disabled
-        style={styles.button}
-        onPress={() => console.log('Disabled button pressed')}
+        onPress={() => router.push("/signin")}
       />
     </View>
   );
@@ -24,16 +38,24 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
+    justifyContent: "center",
+    alignItems: "center",
     paddingHorizontal: 24,
     gap: 16,
   },
   text: {
-    fontFamily: 'Poppins-Medium',
+    fontFamily: "Poppins-Medium",
     fontSize: 24,
-    color: Colors.light.primary1,
+  },
+  toggleContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    marginVertical: 16,
+  },
+  toggleText: {
+    fontFamily: "Poppins-Regular",
+    fontSize: 16,
   },
   button: {
     width: 267,

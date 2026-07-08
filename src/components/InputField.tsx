@@ -6,7 +6,6 @@ import {
   TextInputProps,
   TouchableOpacity,
   View,
-  useColorScheme,
   StyleProp,
   ViewStyle,
   TextStyle,
@@ -16,6 +15,7 @@ import {
 import { Image } from 'expo-image';
 import { Icons, IconType } from '@/assets/icons';
 import { Colors, Typography } from '@/constants/theme';
+import { useTheme } from '@/context/ThemeContext';
 
 export interface InputFieldProps extends Omit<TextInputProps, 'style'> {
   /**
@@ -76,9 +76,7 @@ export function InputField({
   onBlur,
   ...rest
 }: InputFieldProps) {
-  const colorScheme = useColorScheme();
-  const theme = colorScheme === 'dark' ? 'dark' : 'light';
-  const activeColors = Colors[theme];
+  const { theme, activeColors } = useTheme();
   const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = (e: NativeSyntheticEvent<TargetedEvent>) => {
@@ -147,10 +145,8 @@ export function InputField({
           >
             <Image
               source={Icons[rightIconName]}
-              style={[
-                styles.icon,
-                { tintColor: error ? activeColors.error : activeColors.text },
-              ]}
+              style={styles.icon}
+              tintColor={error ? activeColors.error : activeColors.text}
               contentFit="contain"
             />
           </TouchableOpacity>

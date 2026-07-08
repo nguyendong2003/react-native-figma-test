@@ -8,9 +8,9 @@ import {
   StyleProp,
   ViewStyle,
   TextStyle,
-  useColorScheme,
 } from 'react-native';
 import { Colors, Typography } from '@/constants/theme';
+import { useTheme } from '@/context/ThemeContext';
 
 export interface ButtonProps extends Omit<TouchableOpacityProps, 'style'> {
   /**
@@ -45,9 +45,7 @@ export function Button({
   activeOpacity = 0.8,
   ...rest
 }: ButtonProps) {
-  const colorScheme = useColorScheme();
-  const theme = colorScheme === 'dark' ? 'dark' : 'light';
-  const activeColors = Colors[theme];
+  const { theme, activeColors } = useTheme();
 
   const isDark = theme === 'dark';
   

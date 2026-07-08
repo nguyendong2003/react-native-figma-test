@@ -1,16 +1,59 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
 import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
 import { Stack } from 'expo-router';
+import { View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { AppThemeProvider, useTheme } from '@/context/ThemeContext';
+import { NavigationBar } from '@/components/NavigationBar';
 
 // Prevent splash screen auto hide
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
+function SignInHeader() {
+  const { theme, activeColors } = useTheme();
+  const insets = useSafeAreaInsets();
 
+  return (
+    <View style={{ paddingTop: insets.top, backgroundColor: theme === 'light' ? activeColors.primary1 : activeColors.background }}>
+      <NavigationBar
+        title="Sign in"
+        showBackButton={true}
+        backButtonTint={theme === 'light' ? activeColors.neutral6 : activeColors.text}
+        style={{
+          backgroundColor: theme === 'light' ? activeColors.primary1 : activeColors.background,
+          borderBottomWidth: 0,
+        }}
+        titleStyle={{
+          color: theme === 'light' ? activeColors.neutral6 : activeColors.text,
+        }}
+      />
+    </View>
+  );
+}
+
+function InnerLayout() {
+  const { theme } = useTheme();
+
+  return (
+    <ThemeProvider value={theme === 'dark' ? DarkTheme : DefaultTheme}>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" />
+        <Stack.Screen 
+          name="signin" 
+          options={{ 
+            headerShown: true,
+            header: () => <SignInHeader />,
+            animation: 'slide_from_right'
+          }} 
+        />
+      </Stack>
+    </ThemeProvider>
+  );
+}
+
+export default function RootLayout() {
   const [loaded, error] = useFonts({
     'Poppins-Regular': require('../../assets/fonts/poppins/Poppins-Regular.ttf'),
     'Poppins-Medium': require('../../assets/fonts/poppins/Poppins-Medium.ttf'),
@@ -30,8 +73,8 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{ headerShown: false }} />
-    </ThemeProvider>
+    <AppThemeProvider>
+      <InnerLayout />
+    </AppThemeProvider>
   );
 }

@@ -1,18 +1,17 @@
-import React from 'react';
-import { 
-  StyleSheet, 
-  Text, 
-  TouchableOpacity, 
-  View, 
-  useColorScheme, 
-  StyleProp, 
-  ViewStyle, 
-  TextStyle 
-} from 'react-native';
-import { router } from 'expo-router';
-import { Image } from 'expo-image';
-import { Icons, IconType } from '@/assets/icons';
-import { Colors, Typography } from '@/constants/theme';
+import { Icons, IconType } from "@/assets/icons";
+import { Typography } from "@/constants/theme";
+import { useTheme } from "@/context/ThemeContext";
+import { Image } from "expo-image";
+import { router } from "expo-router";
+import {
+  StyleProp,
+  StyleSheet,
+  Text,
+  TextStyle,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from "react-native";
 
 export interface NavigationBarProps {
   /**
@@ -65,72 +64,74 @@ export function NavigationBar({
   onBackPress,
   showRightButton = false,
   onRightPress,
-  rightIconName = 'search',
+  rightIconName = "search",
   style,
   titleStyle,
   backButtonTint,
   rightButtonTint,
 }: NavigationBarProps) {
-  const colorScheme = useColorScheme();
-  const theme = colorScheme === 'dark' ? 'dark' : 'light';
-  const activeColors = Colors[theme];
+  const { theme, activeColors } = useTheme();
 
-  const handleBackPress = onBackPress || (() => {
-    if (router.canGoBack()) {
-      router.back();
-    }
-  });
+  const handleBackPress =
+    onBackPress ||
+    (() => {
+      if (router.canGoBack()) {
+        router.back();
+      }
+    });
 
   return (
-    <View 
+    <View
       style={[
-        styles.container, 
-        { 
+        styles.container,
+        {
           backgroundColor: activeColors.background,
           borderBottomColor: activeColors.border,
-        }, 
-        style
+        },
+        style,
       ]}
       accessibilityRole="header"
     >
       <View style={styles.contentRow}>
         {showBackButton && (
-          <TouchableOpacity 
-            onPress={handleBackPress} 
+          <TouchableOpacity
+            onPress={handleBackPress}
             style={styles.backButton}
             accessibilityLabel="Go back"
             accessibilityRole="button"
           >
-            <Image 
-              source={Icons.arrowDownSignToNavigate} 
-              style={[styles.backIcon, { tintColor: backButtonTint || activeColors.text }]}
+            <Image
+              source={Icons.arrowDownSignToNavigate}
+              style={styles.backIcon}
+              tintColor={backButtonTint || activeColors.text}
               contentFit="contain"
             />
           </TouchableOpacity>
         )}
-        
-        <Text 
+
+        <Text
           style={[
-            styles.title, 
+            styles.title,
             { color: activeColors.text },
             !showBackButton && styles.titleNoBack,
-            titleStyle
+            titleStyle,
           ]}
           numberOfLines={1}
         >
           {title}
         </Text>
-        
+
         {showRightButton && (
-          <TouchableOpacity 
-            onPress={onRightPress} 
+          <TouchableOpacity
+            onPress={onRightPress}
             style={styles.rightButton}
             accessibilityLabel="Action"
             accessibilityRole="button"
           >
-            <Image 
-              source={Icons[rightIconName]} 
-              style={[styles.rightIcon, { tintColor: rightButtonTint || activeColors.text }]}
+            <Image
+              source={Icons[rightIconName]}
+              style={styles.rightIcon}
+              tintColor={rightButtonTint || activeColors.text}
               contentFit="contain"
             />
           </TouchableOpacity>
@@ -143,25 +144,28 @@ export function NavigationBar({
 const styles = StyleSheet.create({
   container: {
     height: 53,
-    width: '100%',
-    justifyContent: 'center',
+    width: "100%",
     borderBottomWidth: 1,
   },
   contentRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     paddingHorizontal: 24,
-    width: '100%',
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 28,
   },
   backButton: {
     marginRight: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   rightButton: {
     marginLeft: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   backIcon: {
     width: 16,
@@ -174,7 +178,7 @@ const styles = StyleSheet.create({
   title: {
     ...Typography.title2,
     flex: 1,
-    textAlign: 'left',
+    textAlign: "left",
   },
   titleNoBack: {
     marginLeft: 0,
