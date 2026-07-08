@@ -38,6 +38,12 @@ export default function HomeScreen() {
         style={styles.button}
         onPress={() => router.push("/signup")}
       />
+
+      <Button
+        title="Transfer Screen"
+        style={styles.button}
+        onPress={() => router.push("/transfer")}
+      />
     </SafeAreaView>
   );
 }

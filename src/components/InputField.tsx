@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
+import { Icons, IconType } from "@/assets/icons";
+import { Typography } from "@/constants/theme";
+import { useTheme } from "@/context/ThemeContext";
+import { Image } from "expo-image";
+import { useState } from "react";
 import {
+  NativeSyntheticEvent,
+  StyleProp,
   StyleSheet,
+  TargetedEvent,
   Text,
   TextInput,
   TextInputProps,
+  TextStyle,
   TouchableOpacity,
   View,
-  StyleProp,
   ViewStyle,
-  TextStyle,
-  NativeSyntheticEvent,
-  TargetedEvent,
-} from 'react-native';
-import { Image } from 'expo-image';
-import { Icons, IconType } from '@/assets/icons';
-import { Colors, Typography } from '@/constants/theme';
-import { useTheme } from '@/context/ThemeContext';
+} from "react-native";
 
-export interface InputFieldProps extends Omit<TextInputProps, 'style'> {
+export interface InputFieldProps extends Omit<TextInputProps, "style"> {
   /**
    * Optional label text displayed above the input field.
    */
@@ -38,6 +38,10 @@ export interface InputFieldProps extends Omit<TextInputProps, 'style'> {
    * Optional callback when the right icon is pressed.
    */
   onIconPress?: () => void;
+  /**
+   * Optional callback when the entire input field is pressed (e.g., for dropdowns).
+   */
+  onPress?: () => void;
   /**
    * Style override for the outermost container wrapper.
    */
@@ -66,6 +70,7 @@ export function InputField({
   error,
   rightIconName,
   onIconPress,
+  onPress,
   style,
   containerStyle,
   inputStyle,
@@ -78,6 +83,10 @@ export function InputField({
 }: InputFieldProps) {
   const { theme, activeColors } = useTheme();
   const [isFocused, setIsFocused] = useState(false);
+
+  const isDropdown = !!onPress;
+  const resolvedRightIconName =
+    rightIconName || (isDropdown ? "unfoldMore" : undefined);
 
   const handleFocus = (e: NativeSyntheticEvent<TargetedEvent>) => {
     setIsFocused(true);
@@ -93,7 +102,7 @@ export function InputField({
     }
   };
 
-  const defaultBorderColor = theme === 'dark' ? activeColors.border : '#cbcbcb';
+  const defaultBorderColor = theme === "dark" ? activeColors.border : "#cbcbcb";
   let borderColor = defaultBorderColor;
   if (error) {
     borderColor = activeColors.error;
@@ -108,12 +117,14 @@ export function InputField({
   return (
     <View style={[styles.wrapper, style]}>
       {label && (
-        <Text style={[styles.label, { color: activeColors.textMuted }, labelStyle]}>
+        <Text
+          style={[styles.label, { color: activeColors.textMuted }, labelStyle]}
+        >
           {label}
         </Text>
       )}
-      
-      <View
+
+      <TouchableOpacity
         style={[
           styles.container,
           {
@@ -122,45 +133,43 @@ export function InputField({
           },
           containerStyle,
         ]}
+        onPress={onPress}
+        disabled={!isDropdown}
+        activeOpacity={0.8}
+        accessibilityRole={isDropdown ? "button" : undefined}
       >
         <TextInput
-          style={[
-            styles.input,
-            { color: activeColors.text },
-            inputStyle,
-          ]}
-          placeholderTextColor={placeholderTextColor || activeColors.placeholder}
+          style={[styles.input, { color: activeColors.text }, inputStyle]}
+          placeholderTextColor={
+            placeholderTextColor || activeColors.placeholder
+          }
           onFocus={handleFocus}
           onBlur={handleBlur}
+          editable={!isDropdown}
+          pointerEvents={isDropdown ? "none" : undefined}
           {...rest}
         />
 
-        {rightIconName && (
+        {resolvedRightIconName && (
           <TouchableOpacity
-            onPress={onIconPress}
-            disabled={!onIconPress}
+            onPress={onIconPress || onPress}
+            disabled={!onIconPress && !isDropdown}
             style={styles.iconContainer}
-            accessibilityRole={onIconPress ? 'button' : 'image'}
-            accessibilityLabel={rightIconName}
+            accessibilityRole={onIconPress ? "button" : "image"}
+            accessibilityLabel={resolvedRightIconName}
           >
             <Image
-              source={Icons[rightIconName]}
+              source={Icons[resolvedRightIconName]}
               style={styles.icon}
               tintColor={error ? activeColors.error : activeColors.text}
               contentFit="contain"
             />
           </TouchableOpacity>
         )}
-      </View>
+      </TouchableOpacity>
 
       {showCaption && (
-        <Text
-          style={[
-            styles.caption,
-            { color: captionColor },
-            captionStyle,
-          ]}
-        >
+        <Text style={[styles.caption, { color: captionColor }, captionStyle]}>
           {captionText}
         </Text>
       )}
@@ -170,30 +179,31 @@ export function InputField({
 
 const styles = StyleSheet.create({
   wrapper: {
-    alignSelf: 'stretch',
+    alignSelf: "stretch",
   },
   label: {
     ...Typography.caption1,
     marginBottom: 6,
   },
   container: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     height: 44,
     borderRadius: 15,
     borderWidth: 1,
     paddingHorizontal: 12,
-    alignSelf: 'stretch',
+    alignSelf: "stretch",
   },
   input: {
     flex: 1,
-    height: '100%',
+    height: "100%",
     ...Typography.body3,
     padding: 0, // Reset default Android paddings
+    minWidth: 0,
   },
   iconContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginLeft: 8,
   },
   icon: {
