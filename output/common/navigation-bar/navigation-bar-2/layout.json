@@ -1,0 +1,198 @@
+[
+    {
+        "bounds": {
+            "height": 53,
+            "width": 375,
+            "x": 0,
+            "y": 40
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 53,
+                    "width": 375,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": "I373:134;104:2530",
+                "name": "Rectangle 401",
+                "styles": {
+                    "fillStyle": "Neutral / 6",
+                    "fills": [
+                        "#ffffff"
+                    ]
+                },
+                "type": "RECTANGLE"
+            },
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 16,
+                    "x": 24,
+                    "y": 31
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 8.65,
+                            "width": 15.99,
+                            "x": 12,
+                            "y": 0
+                        },
+                        "id": "I373:134;100:278;54:21611",
+                        "name": "Path",
+                        "styles": {
+                            "fillStyle": "Neutral / 6",
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "strokes": [
+                                "#979797"
+                            ]
+                        },
+                        "type": "VECTOR"
+                    }
+                ],
+                "id": "I373:134;100:278",
+                "name": "Icon/arrow-down-sign-to-navigate",
+                "styles": {
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 28,
+                    "width": 69,
+                    "x": 56,
+                    "y": 25
+                },
+                "characters": "Sign in",
+                "id": "I373:134;100:266",
+                "name": "UI Text/Heading/H3/B",
+                "styles": {
+                    "fillStyle": "Neutral / 6",
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 20,
+                    "fontStyle": "SemiBold",
+                    "fontWeight": 600,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 28
+                    },
+                    "textAlignHorizontal": "LEFT",
+                    "textStyle": "Title/2"
+                },
+                "type": "TEXT"
+            },
+            {
+                "bounds": {
+                    "height": 20,
+                    "width": 20,
+                    "x": 331,
+                    "y": 29
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 18.32,
+                            "width": 18.32,
+                            "x": 0.83,
+                            "y": 0.83
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 15,
+                                    "width": 15,
+                                    "x": 0.83,
+                                    "y": 0.83
+                                },
+                                "id": "I373:134;373:925;14:596",
+                                "name": "Vector",
+                                "styles": {
+                                    "fills": [
+                                        "#444444"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 4.17,
+                                    "width": 4.17,
+                                    "x": 4.17,
+                                    "y": 4.17
+                                },
+                                "id": "I373:134;373:925;14:597",
+                                "name": "Vector",
+                                "styles": {
+                                    "fills": [
+                                        "#444444"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 4.96,
+                                    "width": 4.96,
+                                    "x": 14.2,
+                                    "y": 14.2
+                                },
+                                "id": "I373:134;373:925;14:598",
+                                "name": "Vector",
+                                "styles": {
+                                    "fills": [
+                                        "#444444"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I373:134;373:925;14:595",
+                        "name": "Group",
+                        "styles": {},
+                        "type": "GROUP"
+                    }
+                ],
+                "id": "I373:134;373:925",
+                "name": "Icon",
+                "styles": {
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            }
+        ],
+        "id": "373:134",
+        "name": "Navigation Bar / Black",
+        "styles": {
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "INSTANCE"
+    }
+]

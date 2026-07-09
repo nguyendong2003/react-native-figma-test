@@ -1,0 +1,43 @@
+[
+    {
+        "bounds": {
+            "height": 24,
+            "width": 24,
+            "x": 76,
+            "y": 589
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 24,
+                    "width": 24,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": "122:1885",
+                "name": "Rectangle/dissable",
+                "styles": {
+                    "cornerRadius": 4,
+                    "strokes": [
+                        "#bfbfbf"
+                    ]
+                },
+                "type": "RECTANGLE"
+            }
+        ],
+        "id": "122:1908",
+        "name": "\bIcon / 47",
+        "styles": {
+            "fills": [
+                "#ffffff"
+            ],
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "COMPONENT"
+    }
+]

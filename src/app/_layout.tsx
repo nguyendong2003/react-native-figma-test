@@ -14,6 +14,9 @@ function InnerLayout() {
     <ThemeProvider value={theme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name='index' />
+        <Stack.Screen name='signin' />
+        <Stack.Screen name='signup' />
+        <Stack.Screen name='transfer-confirm' />
       </Stack>
     </ThemeProvider>
   );

@@ -1,0 +1,100 @@
+[
+    {
+        "bounds": {
+            "height": 24,
+            "width": 24,
+            "x": 124,
+            "y": 589
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 24,
+                    "width": 24,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": "122:1891",
+                "name": "Rectangle/active",
+                "styles": {
+                    "cornerRadius": 4,
+                    "strokeStyle": "Primary / 1",
+                    "strokes": [
+                        "#3629b7"
+                    ]
+                },
+                "type": "RECTANGLE"
+            },
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 16,
+                    "x": 4,
+                    "y": 4
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 16,
+                            "width": 16,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 7.33,
+                                    "width": 10,
+                                    "x": 2.67,
+                                    "y": 4.67
+                                },
+                                "id": "I122:1903;122:1899",
+                                "name": "Vector",
+                                "styles": {
+                                    "strokeStyle": "Primary / 1",
+                                    "strokes": [
+                                        "#3629b7"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I122:1903;122:1900",
+                        "name": "Frame 2",
+                        "styles": {
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "FRAME"
+                    }
+                ],
+                "id": "122:1903",
+                "name": "icons/check",
+                "styles": {
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            }
+        ],
+        "id": "122:1907",
+        "name": "\bIcon / 46",
+        "styles": {
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "COMPONENT"
+    }
+]
