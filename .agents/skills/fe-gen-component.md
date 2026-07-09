@@ -11,17 +11,18 @@ When instructed to run `fe-gen-component <ComponentName>`, perform the following
    ```bash
    python3 test_figma_mcp.py --component <ComponentName>
    ```
-2. Verify that the output directory `output/common/<component-name-kebab-case>/` contains:
+2. Verify that a new versioned subdirectory has been created under `output/common/<component-name-kebab-case>/` (e.g., `output/common/input-field/input-field-1/` on the first run, and `output/common/input-field/input-field-2/` on subsequent runs) containing:
    - `layout.json` (the geometric-sorted component selection tree).
    - `screenshot.png` representing the design.
 3. If the command fails (e.g., due to no selection on Figma Desktop), report the error to the user and prompt them to select the target component on Figma Desktop, then rerun the command.
 
-### Step 2: Reuse Check & Extension Check
+### Step 2: Reuse Check, Multi-Variant Analysis & Extension Check
 1. Look at existing files in `src/components/`.
-2. Assess if a similar component already exists:
-   - Check if there is an existing button, input, header, or card that shares 80%+ of the layout and structure.
-   - **Do NOT duplicate code.** If the target component differs only in color, padding, text, icons, or state (e.g., active vs. inactive), do not write a new file.
-   - **Extend the existing component**: Add optional props (e.g. `variant`, `showIcon`, `isActive`), and extend the existing stylesheet or support inline style merging using `StyleSheet.flatten` or spreading styles.
+2. Assess if the component or a similar one already exists:
+   - If the component file already exists (e.g., `src/components/InputField.tsx`), **do NOT duplicate code** or overwrite the file.
+   - Inspect the latest exported version (e.g., `input-field-2/` with the highest version suffix) alongside all previous versions (`input-field-1/`, etc.) to analyze the different design states, inputs, colors, and layout configurations.
+   - **Extend the existing component**: Update its TypeScript props interface with optional properties (e.g., `variant?: 'default' | 'icon-right'`, `status?: 'default' | 'error' | 'active'`, `rightIcon?: IconType`), and merge/extend its styling using conditional stylesheet rules.
+   - If the component does not exist yet, build the base implementation using the first version (`<component-name>-1`).
 
 ### Step 3: Decompose Complex Components
 1. If the component is a complex aggregate (e.g., a multi-step card form or a dashboard layout component):

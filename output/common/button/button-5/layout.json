@@ -1,0 +1,163 @@
+[
+    {
+        "bounds": {
+            "height": 44,
+            "width": 44,
+            "x": 76,
+            "y": 500
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 44,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": "379:1353",
+                "name": "Ellipse",
+                "styles": {
+                    "fillStyle": "Primary / 1",
+                    "fills": [
+                        "#3629b7"
+                    ]
+                },
+                "type": "ELLIPSE"
+            },
+            {
+                "bounds": {
+                    "height": 20,
+                    "width": 20,
+                    "x": 12,
+                    "y": 12
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 14.17,
+                            "width": 17.5,
+                            "x": 1.67,
+                            "y": 3.33
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 1.68,
+                                    "width": 16.34,
+                                    "x": 18.01,
+                                    "y": 11.26
+                                },
+                                "id": "I379:1354;104:3693",
+                                "name": "Shape",
+                                "styles": {
+                                    "fillStyle": "Neutral / 6",
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 14.17,
+                                    "width": 17.5,
+                                    "x": 19.17,
+                                    "y": 17.5
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 1.68,
+                                            "width": 16.34,
+                                            "x": 18.01,
+                                            "y": 11.26
+                                        },
+                                        "id": "I379:1354;104:3691",
+                                        "name": "Shape",
+                                        "styles": {
+                                            "fills": [
+                                                "#444444"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 14.17,
+                                            "width": 8.03,
+                                            "x": 19.17,
+                                            "y": 17.5
+                                        },
+                                        "id": "I379:1354;104:3692",
+                                        "name": "Shape",
+                                        "styles": {
+                                            "fills": [
+                                                "#444444"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    }
+                                ],
+                                "id": "I379:1354;104:3690",
+                                "name": "Mask",
+                                "styles": {
+                                    "fillStyle": "Neutral / 6",
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "BOOLEAN_OPERATION"
+                            },
+                            {
+                                "bounds": {
+                                    "height": 14.17,
+                                    "width": 8.03,
+                                    "x": 19.17,
+                                    "y": 17.5
+                                },
+                                "id": "I379:1354;104:3694",
+                                "name": "Shape",
+                                "styles": {
+                                    "fillStyle": "Neutral / 6",
+                                    "fills": [
+                                        "#ffffff"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I379:1354;104:3689",
+                        "name": "Group 343",
+                        "styles": {},
+                        "type": "GROUP"
+                    }
+                ],
+                "id": "379:1354",
+                "name": "\bIcon / 05",
+                "styles": {
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            }
+        ],
+        "id": "379:1414",
+        "name": "Button / Round / Active",
+        "styles": {
+            "fills": [
+                "#ffffff"
+            ],
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "COMPONENT"
+    }
+]

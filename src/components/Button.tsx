@@ -1,98 +1,177 @@
-import React from 'react';
+import { Icons, IconType } from '@/assets/icons';
+import { Typography } from '@/constants/theme';
+import { useTheme } from '@/context/ThemeContext';
+import { Image } from 'expo-image';
 import {
+  ActivityIndicator,
+  Pressable,
+  PressableProps,
+  StyleProp,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  TouchableOpacityProps,
-  ActivityIndicator,
-  StyleProp,
-  ViewStyle,
   TextStyle,
+  ViewStyle,
 } from 'react-native';
-import { Colors, Typography } from '@/constants/theme';
-import { useTheme } from '@/context/ThemeContext';
 
-export interface ButtonProps extends Omit<TouchableOpacityProps, 'style'> {
-  /**
-   * The text displayed on the button.
-   */
-  title: string;
-  /**
-   * If true, displays a loading spinner instead of the button text.
-   */
+export interface ButtonProps extends Omit<PressableProps, 'style'> {
+  title?: string;
+  variant?: 'primary' | 'secondary' | 'outline' | 'text' | 'ghost' | 'round' | 'link';
   loading?: boolean;
-  /**
-   * Optional style overrides for the button container.
-   */
+  icon?: IconType;
   style?: StyleProp<ViewStyle>;
-  /**
-   * Optional style overrides for the button text label.
-   */
   textStyle?: StyleProp<TextStyle>;
-  /**
-   * Button style variant. Defaults to 'primary'.
-   */
-  variant?: 'primary';
 }
 
 export function Button({
   title,
+  variant = 'primary',
   loading = false,
-  disabled = false,
+  disabled,
+  icon,
   style,
   textStyle,
-  variant = 'primary',
-  activeOpacity = 0.8,
-  ...rest
+  ...pressableProps
 }: ButtonProps) {
-  const { theme, activeColors } = useTheme();
+  const { activeColors } = useTheme();
 
-  const isDark = theme === 'dark';
-  
-  // Disabled styling based on Figma (Primary / 4 background) and accessible contrast
-  const disabledBgColor = isDark ? activeColors.primaryLight : activeColors.primary4;
-  const disabledTextColor = isDark ? activeColors.neutral3 : activeColors.primary3;
+  // Helper to determine text color
+  const getTextColor = () => {
+    if (disabled || loading) {
+      if (variant === 'ghost') {
+        return activeColors.placeholder; // Figma uses Neutral/4 (#cacaca) for disabled ghost button text
+      }
+    }
 
-  const containerBgColor = disabled ? disabledBgColor : activeColors.primary;
-  const labelTextColor = disabled ? disabledTextColor : activeColors.neutral6;
+    switch (variant) {
+      case 'secondary':
+      case 'outline':
+      case 'text':
+      case 'link':
+        return activeColors.primary;
+      case 'ghost':
+        return activeColors.error;
+      case 'primary':
+      case 'round':
+      default:
+        return '#ffffff'; // Always white for primary and round icon buttons as per Figma specs
+    }
+  };
 
-  const buttonStyle = [
-    styles.container,
-    {
-      backgroundColor: containerBgColor,
-    },
-    style,
-  ];
+  // Helper to determine background color
+  const getBackgroundColor = () => {
+    if (variant === 'text' || variant === 'outline' || variant === 'link') {
+      return 'transparent';
+    }
+
+    if (disabled || loading) {
+      if (variant === 'primary' || variant === 'round') {
+        return activeColors.primaryLight; // Figma uses Primary/4 (#f2f1f9) for disabled primary/round buttons
+      }
+    }
+
+    if (variant === 'ghost') {
+      return activeColors.surface;
+    }
+
+    if (variant === 'secondary') {
+      return activeColors.primaryLight;
+    }
+
+    // primary or round
+    return activeColors.primary;
+  };
+
+  // Helper to determine border color
+  const getBorderColor = () => {
+    if (variant === 'outline') {
+      return activeColors.primary;
+    }
+    return 'transparent';
+  };
+
+  const getTextStylePreset = () => {
+    if (variant === 'link') {
+      return Typography.caption1;
+    }
+    return styles.textBase;
+  };
+
+  const textColor = getTextColor();
 
   return (
-    <TouchableOpacity
-      style={buttonStyle}
+    <Pressable
       disabled={disabled || loading}
-      activeOpacity={activeOpacity}
-      accessibilityRole="button"
-      {...rest}
+      style={({ pressed }) => [
+        styles.buttonBase,
+        variant === 'round' && styles.buttonRound,
+        variant === 'link' && styles.buttonLink,
+        {
+          backgroundColor: getBackgroundColor(),
+          borderColor: getBorderColor(),
+          borderWidth: variant === 'outline' ? 1 : 0,
+          opacity:
+            disabled || loading
+              ? variant === 'primary' ||
+                variant === 'ghost' ||
+                variant === 'round'
+                ? 1
+                : 0.6
+              : pressed
+                ? 0.85
+                : 1, // Opacity transition when pressed
+          transform: [{ scale: pressed && !disabled && !loading ? 0.98 : 1 }],
+        },
+        style,
+      ]}
+      {...pressableProps}
     >
       {loading ? (
-        <ActivityIndicator color={labelTextColor} size="small" />
+        <ActivityIndicator size='small' color={textColor} />
+      ) : variant === 'round' ? (
+        <Image
+          source={icon ? Icons[icon] : Icons.arrowDownSignToNavigate}
+          style={styles.buttonIcon}
+          tintColor={textColor}
+          contentFit='contain'
+        />
       ) : (
-        <Text style={[styles.text, { color: labelTextColor }, textStyle]}>
+        <Text style={[getTextStylePreset(), { color: textColor }, textStyle]}>
           {title}
         </Text>
       )}
-    </TouchableOpacity>
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  buttonBase: {
     height: 44,
     borderRadius: 15,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 16,
-    alignSelf: 'stretch',
+    paddingHorizontal: 24,
+    flexDirection: 'row',
   },
-  text: {
+  buttonRound: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    paddingHorizontal: 0,
+    alignSelf: 'center',
+  },
+  buttonLink: {
+    height: 'auto',
+    borderRadius: 0,
+    paddingHorizontal: 0,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+  },
+  buttonIcon: {
+    width: 20,
+    height: 20,
+  },
+  textBase: {
     ...Typography.body1,
+    textAlign: 'center',
   },
 });

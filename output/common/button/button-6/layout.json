@@ -1,0 +1,54 @@
+[
+    {
+        "bounds": {
+            "height": 16,
+            "width": 24,
+            "x": 291,
+            "y": 514
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 24,
+                    "x": 0,
+                    "y": 0
+                },
+                "characters": "Link",
+                "id": "379:42",
+                "name": "Link",
+                "styles": {
+                    "fillStyle": "Primary / 1",
+                    "fills": [
+                        "#3629b7"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 12,
+                    "fontStyle": "SemiBold",
+                    "fontWeight": 600,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 16
+                    },
+                    "textAlignHorizontal": "LEFT",
+                    "textStyle": "Caption / 1"
+                },
+                "type": "TEXT"
+            }
+        ],
+        "id": "379:43",
+        "name": "Button / Link",
+        "styles": {
+            "fills": [
+                "#ffffff"
+            ],
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "COMPONENT"
+    }
+]

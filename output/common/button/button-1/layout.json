@@ -1,0 +1,68 @@
+[
+    {
+        "bounds": {
+            "height": 44,
+            "width": 267,
+            "x": 76,
+            "y": 234
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 267,
+                    "x": 0,
+                    "y": 0
+                },
+                "id": "57:21402",
+                "name": "Rectangle 43",
+                "styles": {
+                    "cornerRadius": 15,
+                    "fillStyle": "Primary / 1",
+                    "fills": [
+                        "#3629b7"
+                    ]
+                },
+                "type": "RECTANGLE"
+            },
+            {
+                "bounds": {
+                    "height": 24,
+                    "width": 54,
+                    "x": 106,
+                    "y": 10
+                },
+                "characters": "Sign in",
+                "id": "57:21403",
+                "name": "Sign in",
+                "styles": {
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontStyle": "Medium",
+                    "fontWeight": 500,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 24
+                    },
+                    "textAlignHorizontal": "CENTER",
+                    "textStyle": "Body / 1"
+                },
+                "type": "TEXT"
+            }
+        ],
+        "id": "57:21405",
+        "name": "Button / Primary / Active",
+        "styles": {
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "COMPONENT"
+    }
+]

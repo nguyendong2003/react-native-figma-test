@@ -12,7 +12,7 @@ When instructed to run `fe-gen-screen <screen-name>`, perform the following sequ
    ```bash
    python3 test_figma_mcp.py --screen <screen-name>
    ```
-2. Verify that the output directory `output/<screen-name-kebab-case>/` contains:
+2. Verify that a new versioned subdirectory has been created under `output/<screen-name-kebab-case>/` (e.g., `output/explore/explore-1/` on the first run, and `output/explore/explore-2/` on subsequent runs) containing:
    - `layout.json` (the geometric-sorted node JSON for the screen).
    - `screenshot.png` representing the design.
 3. If the command fails (e.g., due to no selection on Figma Desktop), report the error to the user and prompt them to select the target screen on Figma Desktop, then rerun the command.
@@ -47,7 +47,10 @@ When instructed to run `fe-gen-screen <screen-name>`, perform the following sequ
 
 ### Step 6: Layout Assembly & Screen Construction
 
-1. Create the screen file under `src/app/` (e.g., `src/app/<route>.tsx`) following `expo-router` routing structure and `naming-conventions.md`.
+1. Create or update the screen file under `src/app/` (e.g., `src/app/<route>.tsx`) following `expo-router` routing structure and `naming-conventions.md`.
+   - If the screen file already exists, **do NOT overwrite it** or duplicate pages.
+   - Inspect the latest exported screen version (e.g., `explore-2/` with the highest version suffix) alongside all previous versions (`explore-1/`, etc.) to analyze the different design states (e.g., active tab, interactive modals, toggled states, screen transitions).
+   - Implement appropriate React state variables and interactive event handlers to toggle/transition between these different states in the same screen file.
 2. Follow `parse-layout.md` rules to translate coordinates, layout margins, alignments, and sizes into exact React Native `StyleSheet` values.
 3. Import the shared theme, extracted sub-components, and registered assets.
 4. Ensure screen layout wrappers use `SafeAreaView` from `react-native-safe-area-context` (specifically targeting vertical edges like `edges={['bottom']}` or `edges={['top']}`) to ensure correct rendering and avoid manual safe-area padding calculations.

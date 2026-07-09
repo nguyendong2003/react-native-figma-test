@@ -195,11 +195,29 @@ if __name__ == "__main__":
         target_name = slugify(node_name)
         print(f"🤖 Tự động phát hiện loại node: {mode.upper()} -> Tên: '{target_name}'")
 
-    # Set target folders
+    # Set target parent folder and find versioned subdirectory
     if mode == "screen":
-        target_dir = os.path.join(output_dir, target_name)
+        parent_dir = os.path.join(output_dir, target_name)
     else:
-        target_dir = os.path.join(output_dir, "common", target_name)
+        parent_dir = os.path.join(output_dir, "common", target_name)
+
+    if not os.path.exists(parent_dir):
+        os.makedirs(parent_dir)
+
+    # Count existing versioned directories in parent_dir
+    existing_dirs = []
+    for name in os.listdir(parent_dir):
+        if os.path.isdir(os.path.join(parent_dir, name)):
+            match = re.match(rf"^{re.escape(target_name)}-(\d+)$", name)
+            if match:
+                existing_dirs.append(int(match.group(1)))
+
+    next_index = 1
+    if existing_dirs:
+        next_index = max(existing_dirs) + 1
+
+    target_subdir_name = f"{target_name}-{next_index}"
+    target_dir = os.path.join(parent_dir, target_subdir_name)
 
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)

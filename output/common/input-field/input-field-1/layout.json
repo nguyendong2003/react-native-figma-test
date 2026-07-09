@@ -1,0 +1,305 @@
+[
+    {
+        "bounds": {
+            "height": 92,
+            "width": 327,
+            "x": 1535,
+            "y": 1063
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 33,
+                    "x": 0,
+                    "y": 0
+                },
+                "characters": "Label",
+                "id": "I407:0;373:500",
+                "name": "Label",
+                "styles": {
+                    "fills": [
+                        "#979797"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 12,
+                    "fontStyle": "SemiBold",
+                    "fontWeight": 600,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 16
+                    },
+                    "textAlignHorizontal": "LEFT",
+                    "textStyle": "Caption / 1"
+                },
+                "type": "TEXT"
+            },
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 327,
+                    "x": 0,
+                    "y": 24
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 44,
+                            "width": 327,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "id": "I407:0;373:499;109:170",
+                        "name": "Placeholder",
+                        "styles": {
+                            "cornerRadius": 15,
+                            "strokes": [
+                                "#cbcbcb"
+                            ]
+                        },
+                        "type": "RECTANGLE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 21,
+                            "width": 69,
+                            "x": 12,
+                            "y": 12
+                        },
+                        "characters": "Text input",
+                        "id": "I407:0;373:499;109:171",
+                        "name": "Text input",
+                        "styles": {
+                            "fillStyle": "Neutral/4",
+                            "fills": [
+                                "#cacaca"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 14,
+                            "fontStyle": "Medium",
+                            "fontWeight": 500,
+                            "lineHeight": {
+                                "unit": "PERCENT",
+                                "value": 150
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Body / 3"
+                        },
+                        "type": "TEXT"
+                    },
+                    {
+                        "bounds": {
+                            "height": 24,
+                            "width": 24,
+                            "x": 293,
+                            "y": 10
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 17.18,
+                                    "width": 8.35,
+                                    "x": 7.83,
+                                    "y": 3.41
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 5.17,
+                                            "width": 8.34,
+                                            "x": 7.83,
+                                            "y": 3.41
+                                        },
+                                        "id": "I407:0;373:499;594:7;594:5",
+                                        "name": "Path",
+                                        "styles": {
+                                            "fills": [
+                                                "#dadada"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 5.17,
+                                            "width": 8.34,
+                                            "x": 7.84,
+                                            "y": 15.42
+                                        },
+                                        "id": "I407:0;373:499;594:7;594:6",
+                                        "name": "Path",
+                                        "styles": {
+                                            "fills": [
+                                                "#dadada"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    }
+                                ],
+                                "id": "I407:0;373:499;594:7;594:4",
+                                "name": "icon/navigation/unfold_more_24px",
+                                "styles": {
+                                    "fillStyle": "Black — Inactive",
+                                    "fills": [
+                                        "#0000008a"
+                                    ]
+                                },
+                                "type": "BOOLEAN_OPERATION"
+                            }
+                        ],
+                        "id": "I407:0;373:499;594:7",
+                        "name": "Icon",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 16,
+                            "width": 49,
+                            "x": 12,
+                            "y": 52
+                        },
+                        "characters": "Caption",
+                        "id": "I407:0;373:499;388:1699",
+                        "name": "Caption",
+                        "styles": {
+                            "fillStyle": "Primary / 1",
+                            "fills": [
+                                "#3629b7"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 12,
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "lineHeight": {
+                                "unit": "PIXELS",
+                                "value": 16
+                            },
+                            "textAlignHorizontal": "LEFT",
+                            "textStyle": "Caption / 1"
+                        },
+                        "type": "TEXT"
+                    }
+                ],
+                "id": "I407:0;373:499",
+                "name": "Text field / Default",
+                "styles": {
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 16,
+                    "x": 299,
+                    "y": 38
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 0,
+                            "width": 0,
+                            "x": 3.72,
+                            "y": 0.39
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 15.22,
+                                    "width": 8.28,
+                                    "x": 3.72,
+                                    "y": 0.39
+                                },
+                                "id": "I407:0;571:5864;180:8",
+                                "name": "Vector",
+                                "styles": {
+                                    "fillStyle": "Neutral/4",
+                                    "fills": [
+                                        "#cacaca"
+                                    ]
+                                },
+                                "type": "VECTOR"
+                            }
+                        ],
+                        "id": "I407:0;571:5864;180:7",
+                        "name": "Group",
+                        "styles": {},
+                        "type": "GROUP"
+                    }
+                ],
+                "id": "I407:0;571:5864",
+                "name": "\bIcon / 38",
+                "styles": {
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            },
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 49,
+                    "x": 12,
+                    "y": 76
+                },
+                "characters": "Caption",
+                "id": "I407:0;386:436",
+                "name": "Caption",
+                "styles": {
+                    "fillStyle": "Primary / 1",
+                    "fills": [
+                        "#3629b7"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 12,
+                    "fontStyle": "SemiBold",
+                    "fontWeight": 600,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 16
+                    },
+                    "textAlignHorizontal": "LEFT",
+                    "textStyle": "Caption / 1"
+                },
+                "type": "TEXT"
+            }
+        ],
+        "id": "407:0",
+        "name": "Text field / Label / Default",
+        "styles": {
+            "fills": [
+                "#ffffff"
+            ],
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "INSTANCE"
+    }
+]

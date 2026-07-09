@@ -40,8 +40,8 @@ All code generation is executed by **prompting the AI Agent in the chat UI**. Th
    > *(Example: `fe-gen-component primary-button`)*
 3. **How it works**:
    - The agent automatically executes the terminal command: `python3 test_figma_mcp.py --component primary-button`.
-   - The script saves selection properties to `output/common/primary-button/layout.json` and exports a PNG screenshot.
-   - The agent parses the layout, extracts SVG assets to `assets/icons/`, registers the files, and creates `src/components/PrimaryButton.tsx`.
+   - The script saves selection properties to `output/common/primary-button/primary-button-<version>/layout.json` (where `<version>` is an auto-incremented number starting at 1) and exports a PNG screenshot.
+   - The agent compares this versioned layout with previous versions (if any), extracts new SVG assets, and creates/extends `src/components/PrimaryButton.tsx` to support the new variants and states.
 
 ---
 
@@ -53,8 +53,8 @@ All code generation is executed by **prompting the AI Agent in the chat UI**. Th
    > *(Example: `fe-gen-screen explore`)*
 3. **How it works**:
    - The agent automatically executes: `python3 test_figma_mcp.py --screen explore`.
-   - The script saves design metadata to `output/explore/layout.json` and exports a PNG screenshot.
-   - The agent decomposes the layout, scans for existing reusable components, loads typography presets, and writes the screen layout in `src/app/explore.tsx`.
+   - The script saves design metadata to `output/explore/explore-<version>/layout.json` (where `<version>` is an auto-incremented number starting at 1) and exports a PNG screenshot.
+   - The agent decomposes the layout, scans for existing reusable components, loads typography presets, and writes or updates the interactive screen states in `src/app/explore.tsx`.
    - The agent runs typecheck validation (`npx tsc --noEmit`). The developer handles staging and committing all changes.
 
 ---

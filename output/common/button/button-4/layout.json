@@ -1,0 +1,96 @@
+[
+    {
+        "bounds": {
+            "height": 44,
+            "width": 267,
+            "x": 76,
+            "y": 402
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 267,
+                    "x": 0,
+                    "y": 0
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 44,
+                            "width": 267,
+                            "x": 0,
+                            "y": 0
+                        },
+                        "id": "I388:10;388:8",
+                        "name": "Rectangle 43",
+                        "styles": {
+                            "cornerRadius": 15,
+                            "fillStyle": "Neutral / 6",
+                            "fills": [
+                                "#ffffff"
+                            ]
+                        },
+                        "type": "RECTANGLE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 24,
+                            "width": 54,
+                            "x": 106,
+                            "y": 10
+                        },
+                        "characters": "Button",
+                        "id": "I388:10;388:9",
+                        "name": "Button",
+                        "styles": {
+                            "fillStyle": "Neutral/4",
+                            "fills": [
+                                "#cacaca"
+                            ],
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontStyle": "Medium",
+                            "fontWeight": 500,
+                            "lineHeight": {
+                                "unit": "PIXELS",
+                                "value": 24
+                            },
+                            "textAlignHorizontal": "CENTER",
+                            "textStyle": "Body / 1"
+                        },
+                        "type": "TEXT"
+                    }
+                ],
+                "id": "388:10",
+                "name": "Button / Ghost / Active",
+                "styles": {
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "padding": {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "top": 0
+                    }
+                },
+                "type": "INSTANCE"
+            }
+        ],
+        "id": "388:13",
+        "name": "Button / Ghost / Disable",
+        "styles": {
+            "fills": [
+                "#ffffff"
+            ],
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "COMPONENT"
+    }
+]

@@ -1,0 +1,389 @@
+[
+    {
+        "bounds": {
+            "height": 65,
+            "width": 295,
+            "x": 1178,
+            "y": 1583
+        },
+        "children": [
+            {
+                "bounds": {
+                    "height": 16,
+                    "width": 32,
+                    "x": 0,
+                    "y": 0
+                },
+                "characters": "From",
+                "id": "373:2416",
+                "name": "Label",
+                "styles": {
+                    "fills": [
+                        "#979797"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 12,
+                    "fontStyle": "SemiBold",
+                    "fontWeight": 600,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 16
+                    },
+                    "textAlignHorizontal": "LEFT",
+                    "textStyle": "Caption / 1"
+                },
+                "type": "TEXT"
+            },
+            {
+                "bounds": {
+                    "height": 0,
+                    "width": 34,
+                    "x": 204,
+                    "y": 26
+                },
+                "id": "373:2418",
+                "name": "Line",
+                "styles": {
+                    "strokes": [
+                        "#bfbfbf"
+                    ]
+                },
+                "type": "LINE"
+            },
+            {
+                "bounds": {
+                    "height": 44,
+                    "width": 295,
+                    "x": 0,
+                    "y": 21
+                },
+                "id": "373:2415",
+                "name": "Placeholder",
+                "styles": {
+                    "cornerRadius": 15,
+                    "fills": [
+                        "#ffffff"
+                    ],
+                    "strokes": [
+                        "#bfbfbf"
+                    ]
+                },
+                "type": "RECTANGLE"
+            },
+            {
+                "bounds": {
+                    "height": 21,
+                    "width": 69,
+                    "x": 12,
+                    "y": 33
+                },
+                "characters": "Text input",
+                "id": "373:2417",
+                "name": "Text input",
+                "styles": {
+                    "fillStyle": "Neutral/4",
+                    "fills": [
+                        "#cacaca"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 14,
+                    "fontStyle": "Medium",
+                    "fontWeight": 500,
+                    "lineHeight": {
+                        "unit": "PERCENT",
+                        "value": 150
+                    },
+                    "textAlignHorizontal": "LEFT",
+                    "textStyle": "Body / 3"
+                },
+                "type": "TEXT"
+            },
+            {
+                "bounds": {
+                    "height": 24,
+                    "width": 32,
+                    "x": 224,
+                    "y": 31
+                },
+                "characters": "USD",
+                "id": "373:2419",
+                "name": "USD",
+                "styles": {
+                    "fillStyle": "Neutral/4",
+                    "fills": [
+                        "#cacaca"
+                    ],
+                    "fontFamily": "Poppins",
+                    "fontSize": 16,
+                    "fontStyle": "Medium",
+                    "fontWeight": 500,
+                    "lineHeight": {
+                        "unit": "PIXELS",
+                        "value": 24
+                    },
+                    "textAlignHorizontal": "LEFT",
+                    "textStyle": "Body / 1"
+                },
+                "type": "TEXT"
+            },
+            {
+                "bounds": {
+                    "height": 24,
+                    "width": 12,
+                    "x": 271,
+                    "y": 31
+                },
+                "children": [
+                    {
+                        "bounds": {
+                            "height": 12,
+                            "width": 12,
+                            "x": 271,
+                            "y": 31
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 5.02,
+                                    "width": 11.59,
+                                    "x": 0,
+                                    "y": 3.5
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 5.02,
+                                            "width": 11.59,
+                                            "x": 0,
+                                            "y": 3.5
+                                        },
+                                        "id": "I373:2421;66:747",
+                                        "name": "Mask",
+                                        "styles": {
+                                            "fillStyle": "Neutral / 2",
+                                            "fills": [
+                                                "#898989"
+                                            ],
+                                            "strokeStyle": "Primary / 1",
+                                            "strokes": [
+                                                "#3629b7"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 5.02,
+                                            "width": 11.59,
+                                            "x": 0,
+                                            "y": 3.5
+                                        },
+                                        "id": "I373:2421;66:748",
+                                        "name": "Mask",
+                                        "styles": {
+                                            "fillStyle": "Neutral / 2",
+                                            "fills": [
+                                                "#898989"
+                                            ],
+                                            "strokeStyle": "Primary / 1",
+                                            "strokes": [
+                                                "#3629b7"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 12,
+                                            "width": 12,
+                                            "x": 0,
+                                            "y": 0
+                                        },
+                                        "children": [
+                                            {
+                                                "bounds": {
+                                                    "height": 12,
+                                                    "width": 12,
+                                                    "x": 0,
+                                                    "y": 0
+                                                },
+                                                "id": "I373:2421;66:750",
+                                                "name": "Rectangle Copy",
+                                                "styles": {
+                                                    "fillStyle": "Neutral / 2",
+                                                    "fills": [
+                                                        "#898989"
+                                                    ],
+                                                    "strokeStyle": "Primary / 1",
+                                                    "strokes": [
+                                                        "#3629b7"
+                                                    ]
+                                                },
+                                                "type": "RECTANGLE"
+                                            }
+                                        ],
+                                        "id": "I373:2421;66:749",
+                                        "name": "Color/Black",
+                                        "styles": {},
+                                        "type": "GROUP"
+                                    }
+                                ],
+                                "id": "I373:2421;66:746",
+                                "name": "Color/Black",
+                                "styles": {},
+                                "type": "GROUP"
+                            }
+                        ],
+                        "id": "373:2421",
+                        "name": "Icon/Line/Up bold",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    },
+                    {
+                        "bounds": {
+                            "height": 12,
+                            "width": 12,
+                            "x": 271,
+                            "y": 43
+                        },
+                        "children": [
+                            {
+                                "bounds": {
+                                    "height": 4.9,
+                                    "width": 11.59,
+                                    "x": 0.21,
+                                    "y": 3.6
+                                },
+                                "children": [
+                                    {
+                                        "bounds": {
+                                            "height": 12,
+                                            "width": 12,
+                                            "x": 0,
+                                            "y": -1
+                                        },
+                                        "children": [
+                                            {
+                                                "bounds": {
+                                                    "height": 12,
+                                                    "width": 12,
+                                                    "x": 0,
+                                                    "y": -1
+                                                },
+                                                "id": "I373:2422;66:756",
+                                                "name": "Rectangle Copy",
+                                                "styles": {
+                                                    "fillStyle": "Neutral / 2",
+                                                    "fills": [
+                                                        "#898989"
+                                                    ],
+                                                    "strokeStyle": "Primary / 1",
+                                                    "strokes": [
+                                                        "#3629b7"
+                                                    ]
+                                                },
+                                                "type": "RECTANGLE"
+                                            }
+                                        ],
+                                        "id": "I373:2422;66:755",
+                                        "name": "Color/Black",
+                                        "styles": {},
+                                        "type": "GROUP"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 4.9,
+                                            "width": 11.59,
+                                            "x": 0.21,
+                                            "y": 3.6
+                                        },
+                                        "id": "I373:2422;66:753",
+                                        "name": "Mask",
+                                        "styles": {
+                                            "fillStyle": "Neutral / 2",
+                                            "fills": [
+                                                "#898989"
+                                            ],
+                                            "strokeStyle": "Primary / 1",
+                                            "strokes": [
+                                                "#3629b7"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    },
+                                    {
+                                        "bounds": {
+                                            "height": 4.9,
+                                            "width": 11.59,
+                                            "x": 0.21,
+                                            "y": 3.6
+                                        },
+                                        "id": "I373:2422;66:754",
+                                        "name": "Mask",
+                                        "styles": {
+                                            "fillStyle": "Neutral / 2",
+                                            "fills": [
+                                                "#898989"
+                                            ],
+                                            "strokeStyle": "Primary / 1",
+                                            "strokes": [
+                                                "#3629b7"
+                                            ]
+                                        },
+                                        "type": "VECTOR"
+                                    }
+                                ],
+                                "id": "I373:2422;66:752",
+                                "name": "Color/Black",
+                                "styles": {},
+                                "type": "GROUP"
+                            }
+                        ],
+                        "id": "373:2422",
+                        "name": "Icon/Line/Down",
+                        "styles": {
+                            "fills": [
+                                "#ffffff"
+                            ],
+                            "padding": {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "top": 0
+                            }
+                        },
+                        "type": "INSTANCE"
+                    }
+                ],
+                "id": "373:2420",
+                "name": "Arrow",
+                "styles": {},
+                "type": "GROUP"
+            }
+        ],
+        "id": "373:2434",
+        "name": "Text field / Label / Exchange / Default",
+        "styles": {
+            "fills": [
+                "#ffffff"
+            ],
+            "padding": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            }
+        },
+        "type": "COMPONENT"
+    }
+]

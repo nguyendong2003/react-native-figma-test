@@ -1,176 +1,197 @@
-import { Icons, IconType } from "@/assets/icons";
-import { Typography } from "@/constants/theme";
-import { useTheme } from "@/context/ThemeContext";
-import { Image } from "expo-image";
-import { useState } from "react";
+import React, { useState } from 'react';
 import {
-  NativeSyntheticEvent,
-  StyleProp,
   StyleSheet,
-  TargetedEvent,
   Text,
   TextInput,
-  TextInputProps,
-  TextStyle,
-  TouchableOpacity,
   View,
+  Pressable,
+  StyleProp,
   ViewStyle,
-} from "react-native";
+  TextStyle,
+  TextInputProps,
+  NativeSyntheticEvent,
+  FocusEvent,
+  BlurEvent,
+} from 'react-native';
+import { Image } from 'expo-image';
+import { Icons, IconType } from '@/assets/icons';
+import { useTheme } from '@/context/ThemeContext';
+import { Typography } from '@/constants/theme';
 
-export interface InputFieldProps extends Omit<TextInputProps, "style"> {
-  /**
-   * Optional label text displayed above the input field.
-   */
+export interface InputFieldProps extends Omit<TextInputProps, 'style'> {
   label?: string;
-  /**
-   * Optional helper or caption text displayed below the input field.
-   */
-  caption?: string;
-  /**
-   * Optional error message. If provided, the border and caption/error text will use the error color.
-   */
   error?: string;
-  /**
-   * Optional icon name from the Icons registry to show on the right of the input field.
-   */
-  rightIconName?: IconType;
-  /**
-   * Optional callback when the right icon is pressed.
-   */
-  onIconPress?: () => void;
-  /**
-   * Optional callback when the entire input field is pressed (e.g., for dropdowns).
-   */
-  onPress?: () => void;
-  /**
-   * Style override for the outermost container wrapper.
-   */
-  style?: StyleProp<ViewStyle>;
-  /**
-   * Style override for the inner input container box (holds the TextInput and Icon).
-   */
+  caption?: string;
+  rightIcon?: IconType;
+  onRightIconPress?: () => void;
   containerStyle?: StyleProp<ViewStyle>;
-  /**
-   * Style override for the TextInput itself.
-   */
   inputStyle?: StyleProp<TextStyle>;
-  /**
-   * Style override for the label text.
-   */
-  labelStyle?: StyleProp<TextStyle>;
-  /**
-   * Style override for the caption/error text.
-   */
-  captionStyle?: StyleProp<TextStyle>;
+  variant?: 'default' | 'exchange';
+  currencyCode?: string;
+  onCurrencyPress?: () => void;
 }
 
 export function InputField({
   label,
-  caption,
   error,
-  rightIconName,
-  onIconPress,
-  onPress,
-  style,
+  caption,
+  rightIcon,
+  onRightIconPress,
   containerStyle,
   inputStyle,
-  labelStyle,
-  captionStyle,
-  placeholderTextColor,
+  secureTextEntry,
   onFocus,
   onBlur,
-  ...rest
+  value,
+  placeholderTextColor,
+  variant = 'default',
+  currencyCode,
+  onCurrencyPress,
+  ...restProps
 }: InputFieldProps) {
-  const { theme, activeColors } = useTheme();
+  const { activeColors, isDarkMode } = useTheme();
   const [isFocused, setIsFocused] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
-  const isDropdown = !!onPress;
-  const resolvedRightIconName =
-    rightIconName || (isDropdown ? "unfoldMore" : undefined);
-
-  const handleFocus = (e: NativeSyntheticEvent<TargetedEvent>) => {
+  const handleFocus = (e: FocusEvent) => {
     setIsFocused(true);
     if (onFocus) {
       onFocus(e);
     }
   };
 
-  const handleBlur = (e: NativeSyntheticEvent<TargetedEvent>) => {
+  const handleBlur = (e: BlurEvent) => {
     setIsFocused(false);
     if (onBlur) {
       onBlur(e);
     }
   };
 
-  const defaultBorderColor = theme === "dark" ? activeColors.border : "#cbcbcb";
-  let borderColor = defaultBorderColor;
+  // Determine secure text state
+  const isSecure = secureTextEntry && !isPasswordVisible;
+
+  // Choose the right icon
+  let resolvedRightIcon: IconType | undefined = rightIcon;
+  let handleRightIconPress = onRightIconPress;
+
+  if (secureTextEntry && !rightIcon) {
+    resolvedRightIcon = 'eye';
+    handleRightIconPress = () => {
+      setIsPasswordVisible((prev) => !prev);
+    };
+  }
+
+  // Border colors based on state
+  let borderStyle = styles.borderDefault;
+  let borderColor: string = activeColors.border;
+
   if (error) {
+    borderStyle = styles.borderError;
     borderColor = activeColors.error;
   } else if (isFocused) {
+    borderStyle = styles.borderFocused;
     borderColor = activeColors.primary;
   }
 
-  const showCaption = !!(error || caption);
-  const captionText = error || caption;
-  const captionColor = error ? activeColors.error : activeColors.primary;
+  // Icon tint color
+  const iconTintColor = error
+    ? activeColors.error
+    : isFocused
+    ? activeColors.primary
+    : activeColors.placeholder;
 
   return (
-    <View style={[styles.wrapper, style]}>
+    <View style={[styles.outerContainer, containerStyle]}>
+      {/* Label */}
       {label && (
-        <Text
-          style={[styles.label, { color: activeColors.textMuted }, labelStyle]}
-        >
+        <Text style={[styles.label, { color: activeColors.textMuted }]}>
           {label}
         </Text>
       )}
 
-      <TouchableOpacity
+      {/* Input Container */}
+      <View
         style={[
-          styles.container,
+          styles.inputContainer,
+          borderStyle,
           {
-            backgroundColor: activeColors.background,
-            borderColor,
+            backgroundColor: activeColors.surface,
+            borderColor: borderColor,
           },
-          containerStyle,
         ]}
-        onPress={onPress}
-        disabled={!isDropdown}
-        activeOpacity={0.8}
-        accessibilityRole={isDropdown ? "button" : undefined}
       >
         <TextInput
-          style={[styles.input, { color: activeColors.text }, inputStyle]}
-          placeholderTextColor={
-            placeholderTextColor || activeColors.placeholder
-          }
+          value={value}
+          secureTextEntry={isSecure}
           onFocus={handleFocus}
           onBlur={handleBlur}
-          editable={!isDropdown}
-          pointerEvents={isDropdown ? "none" : undefined}
-          {...rest}
+          placeholderTextColor={placeholderTextColor ?? activeColors.placeholder}
+          style={[
+            styles.textInput,
+            {
+              color: activeColors.text,
+            },
+            inputStyle,
+          ]}
+          {...restProps}
         />
 
-        {resolvedRightIconName && (
-          <TouchableOpacity
-            onPress={onIconPress || onPress}
-            disabled={!onIconPress && !isDropdown}
-            style={styles.iconContainer}
-            accessibilityRole={onIconPress ? "button" : "image"}
-            accessibilityLabel={resolvedRightIconName}
+        {/* Exchange currency selector */}
+        {variant === 'exchange' && (
+          <>
+            <View style={[styles.divider, { backgroundColor: activeColors.border }]} />
+            <Pressable
+              onPress={onCurrencyPress}
+              disabled={!onCurrencyPress}
+              style={({ pressed }) => [
+                styles.currencySelector,
+                pressed && onCurrencyPress && styles.iconPressed,
+              ]}
+            >
+              <Text style={[styles.currencyText, { color: activeColors.text }]}>
+                {currencyCode ?? 'USD'}
+              </Text>
+              <Image
+                source={Icons.unfoldMore}
+                style={styles.dropdownIcon}
+                tintColor={activeColors.textMuted}
+                contentFit="contain"
+              />
+            </Pressable>
+          </>
+        )}
+
+        {/* Right Icon */}
+        {variant === 'default' && resolvedRightIcon && (
+          <Pressable
+            onPress={handleRightIconPress}
+            disabled={!handleRightIconPress}
+            style={({ pressed }) => [
+              styles.iconPressable,
+              pressed && handleRightIconPress && styles.iconPressed,
+            ]}
           >
             <Image
-              source={Icons[resolvedRightIconName]}
-              style={styles.icon}
-              tintColor={error ? activeColors.error : activeColors.text}
+              source={Icons[resolvedRightIcon]}
+              style={styles.rightIcon}
+              tintColor={iconTintColor}
               contentFit="contain"
             />
-          </TouchableOpacity>
+          </Pressable>
         )}
-      </TouchableOpacity>
+      </View>
 
-      {showCaption && (
-        <Text style={[styles.caption, { color: captionColor }, captionStyle]}>
-          {captionText}
+      {/* Caption or Error Helper Text */}
+      {(error || caption) && (
+        <Text
+          style={[
+            styles.caption,
+            {
+              color: error ? activeColors.error : activeColors.primary,
+            },
+          ]}
+        >
+          {error || caption}
         </Text>
       )}
     </View>
@@ -178,41 +199,66 @@ export function InputField({
 }
 
 const styles = StyleSheet.create({
-  wrapper: {
-    alignSelf: "stretch",
+  outerContainer: {
+    width: '100%',
+    alignSelf: 'stretch',
   },
   label: {
     ...Typography.caption1,
-    marginBottom: 6,
+    marginBottom: 8,
   },
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
+  inputContainer: {
     height: 44,
     borderRadius: 15,
     borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 12,
-    alignSelf: "stretch",
   },
-  input: {
+  borderDefault: {},
+  borderFocused: {},
+  borderError: {},
+  textInput: {
     flex: 1,
-    height: "100%",
+    height: '100%',
+    paddingVertical: 0,
     ...Typography.body3,
-    padding: 0, // Reset default Android paddings
     minWidth: 0,
   },
-  iconContainer: {
-    justifyContent: "center",
-    alignItems: "center",
+  iconPressable: {
+    padding: 4,
     marginLeft: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  icon: {
-    width: 24,
-    height: 24,
+  iconPressed: {
+    opacity: 0.7,
+  },
+  rightIcon: {
+    width: 20,
+    height: 20,
   },
   caption: {
     ...Typography.caption1,
     marginTop: 8,
     paddingHorizontal: 12,
+  },
+  divider: {
+    width: 1,
+    height: 20,
+    marginHorizontal: 12,
+  },
+  currencySelector: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 4,
+  },
+  currencyText: {
+    ...Typography.body1,
+    marginRight: 4,
+  },
+  dropdownIcon: {
+    width: 12,
+    height: 16,
   },
 });
